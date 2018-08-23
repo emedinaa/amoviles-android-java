@@ -1,26 +1,27 @@
 # amoviles-android-java
-Curso de Aplicaciones Android con Java - 48h - Academia Móviles
+# Curso de Aplicaciones Android con Java - 48h - Academia Móviles
 
-Lesson2 - Thursday, August 23, 2018
+## Lesson2 - Thursday, August 23, 2018
 
-    Review
+- Review
 
-    Lesson
+- Lesson
 
-    Samples
+- Samples
 
-    Homework
+- Homework
 
-    Resources
+- Resources
 
-Review
-¿Qué temas vimos en la clase pasada ?
+## Review
 
-    Android Studio instalación https://developer.android.com/studio/install
+### ¿Qué temas vimos en la clase pasada ?
 
-    Android Studio https://developer.android.com/studio/intro/
+- Android Studio instalación [https://developer.android.com/studio/install](https://developer.android.com/studio/install)
 
-    Template
+- Android Studio [https://developer.android.com/studio/intro/](https://developer.android.com/studio/intro/)
+
+- Template
 
 Template de proyecto Android 
 
@@ -29,7 +30,7 @@ Gradle version : 4.1
 Android Plugin Version : 3.0.1
 
 Build.gradle del proyecto
-
+```
   // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
@@ -70,9 +71,11 @@ ext {
     supportLibraryVersion = '26.1.0'
     junitVersion = '4.12'
 }
+```
 
 Build.gradle de la App
 
+```
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
@@ -123,19 +126,27 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+```
+### Activities
 
-Activities
+- Crear un nuevo proyecto en Android y realizar los cambios para que tenga la configuración del template(MyFirstApp)
 
-    Crear un nuevo proyecto en Android y realizar los cambios para que tenga la configuración del template(MyFirstApp)
-
-Build your first app https://developer.android.com/training/basics/firstapp/
-Lesson
+Build your first app  [https://developer.android.com/training/basics/firstapp/](https://developer.android.com/training/basics/firstapp/)
 
 
-Java for Android Developers
+## Lesson
 
-Compilar Java online https://www.compilejava.net/
+- Java para mobile developers
 
+- Fundamentos de Android
+
+- Entorno de desarrollo
+
+### Java for Android Developers
+
+Compilar Java online [https://www.compilejava.net/](https://www.compilejava.net/)
+
+```
 public class HelloWorld
 {
 
@@ -145,9 +156,11 @@ public class HelloWorld
     System.out.print("Hello World!");
   }
 }
+```
 
 Comentarios
 
+```
 //This is a single line comment
 
 /*
@@ -155,8 +168,11 @@ This is a comment spreading
 over two lines or more
 */
 
+```
+
 Variables
 
+```
 int first_number, second_number, answer;
 first_number = 10;
 second_number = 20;
@@ -176,8 +192,10 @@ family_name = "Shakespeare";
 
 System.out.println( first_name + " " + family_name );
 
-Operadores
+```
 
+Operadores
+```
 + (the plus sign)
 - (the minus sign)
 * (the multiplication sign is the asterisk sign)
@@ -193,11 +211,15 @@ Operadores
 == HAS A VALUE OF
 ! NOT
 
+```
+
 Condicionales
 
+```
 if ( Statement ) {
 }
-
+```
+```
 int age=18;
 
 if(age<=18){
@@ -206,6 +228,9 @@ if(age<=18){
 if(age>18){
 }
 
+```
+
+```
 if ( condition_one ) {
 
 }
@@ -215,9 +240,11 @@ else if ( condition_two ) {
 else {
 
 }
+```
 
 Booleanos
 
+```
 boolean user = true;
 
 if ( user == true) {
@@ -227,6 +254,9 @@ else {
 System.out.println("it's false");
 } 
 
+```
+
+```
 switch ( variable_to_test ) {
   case value:
     code_here;
@@ -237,27 +267,37 @@ switch ( variable_to_test ) {
   default:
     values_not_caught_above;
 }
+```
 
 Bucles
 
+```
 while (condicion) {
     ...
 }
+```
 
+```
 do {
     ...
 } while (condicion)
+```
 
+```
 for (int i=0; condicion; i++) {
     ...
 }
+```
 
+```
 for (iteredor: coleccion) {
     ...
 }
+```
 
 Métodos
 
+```
  private int sumar(int op1, int op2) {
         return op1+op2;
     }
@@ -274,70 +314,81 @@ Métodos
       //TODO validar si op2!=0
       return op1/op2;
   }
+```
 
-Android Studio
+### Android Studio
 
 Android Studio - User Interface
+![](https://developer.android.com/studio/images/intro/main-window_2-2_2x.png)
 
 Proyecto Android
 
-Android Studio overview https://developer.android.com/studio/intro/
+<img src="https://developer.android.com/studio/images/intro/project-android-view_2-1_2x.png" height="480">
 
-Samples
+Android Studio overview [https://developer.android.com/studio/intro/](https://developer.android.com/studio/intro/)
 
-    JavaAndroidSamples
 
-    GallerySample
+## Samples
 
-    JavaSamples
+- MyFirstApp
 
-Homework
+ <img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson1/images/my-first-app.png" height="480">
 
-    Encuentra un plugin interesante para Android Studio e indica los pasos para instalarlo en el IDE.
+- GallerySample
 
-    Explica sobre SDK Manager y AVD Manager
+ <img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson1/images/gallery-sample.png" height="480">
+ 
+ - JavaAndroidSamples
 
-    Explica sobre el Android Profiles
+ <img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson2/images/java-samples.png" height="480">
 
-Resources
+## Homework
 
-    Entorno de desarrollo https://developer.android.com/studio/index.html?hl=es-419
+- Encuentra un plugin interesante para Android Studio e indica los pasos para instalarlo en el IDE.
 
-    Android Developers - Desarrollo https://developer.android.com/develop/index.html
+- Explica sobre SDK Manager y AVD Manager
 
-    Ejemplos de Android https://developer.android.com/samples/
+- Explica sobre el Android Profiles
 
-    Primer proyecto Android https://developer.android.com/training/basics/firstapp/creating-project.html?hl=es-419
+## Resources
 
-    Codelab - primera android app con Java https://codelabs.developers.google.com/codelabs/build-your-first-android-app/index.html?index=..%2F..%2Findex
+- Entorno de desarrollo https://developer.android.com/studio/index.html?hl=es-419
 
-    Codelab - primera android app con Kotlin https://codelabs.developers.google.com/codelabs/build-your-first-android-app-kotlin/index.html?index=..%2F..%2Findex
+- Android Developers - Desarrollo https://developer.android.com/develop/index.html
 
-    Android Tool Time https://www.youtube.com/watch?v=0n9sBgds-Hs&list=PLWz5rJ2EKKc_w6fodMGrA1_tsI3pqPbqa
+- Ejemplos de Android  https://developer.android.com/samples/
 
-    Canal oficial en Youtube para Android Developers https://www.youtube.com/user/androiddevelopers
+- Primer proyecto Android https://developer.android.com/training/basics/firstapp/creating-project.html?hl=es-419
 
-    Java Programming Fundamentals https://www.udemy.com/java-programming-fundamentals/
+- Codelab - primera android app con Java https://codelabs.developers.google.com/codelabs/build-your-first-android-app/index.html?index=..%2F..%2Findex
 
-    Java Fundamentals Language https://www.pluralsight.com/courses/java-fundamentals-language
+- Codelab - primera android app con Kotlin https://codelabs.developers.google.com/codelabs/build-your-first-android-app-kotlin/index.html?index=..%2F..%2Findex
 
-    Java Programming Basics https://www.udacity.com/course/java-programming-basics--ud282
+- Android Tool Time https://www.youtube.com/watch?v=0n9sBgds-Hs&list=PLWz5rJ2EKKc_w6fodMGrA1_tsI3pqPbqa
 
-    Java Fundamentals for Android Development https://www.edx.org/es/course/java-fundamentals-android-development-galileox-caad001x-2
+- Canal oficial en Youtube para Android Developers https://www.youtube.com/user/androiddevelopers
 
-    The Java tutorials https://docs.oracle.com/javase/tutorial/java/index.html
+- Java Programming Fundamentals https://www.udemy.com/java-programming-fundamentals/
 
-    Java Programming https://www.youtube.com/watch?v=Hl-zzrqQoSE&list=PLFE2CE09D83EE3E28
+- Java Fundamentals Language https://www.pluralsight.com/courses/java-fundamentals-language
 
-    Intellij IDEA https://www.jetbrains.com/idea/
+- Java Programming Basics https://www.udacity.com/course/java-programming-basics--ud282
 
-    Android Studio https://developer.android.com/studio/index.html?hl=es-419
+- Java Fundamentals for Android Development https://www.edx.org/es/course/java-fundamentals-android-development-galileox-caad001x-2
 
-    Online Java IDE https://www.compilejava.net/
+- The Java tutorials https://docs.oracle.com/javase/tutorial/java/index.html
 
-    Sublime text https://www.sublimetext.com/
+- Java Programming https://www.youtube.com/watch?v=Hl-zzrqQoSE&list=PLFE2CE09D83EE3E28
 
-    Google Java Style Guide https://google.github.io/styleguide/javaguide.html
+- Intellij IDEA https://www.jetbrains.com/idea/
 
-    Books Android Developers http://fragmentedpodcast.com/tag/books/
+- Android Studio https://developer.android.com/studio/index.html?hl=es-419
+
+- Online Java IDE https://www.compilejava.net/
+
+- Sublime text https://www.sublimetext.com/
+
+- Google Java Style Guide https://google.github.io/styleguide/javaguide.html
+
+- Books Android Developers http://fragmentedpodcast.com/tag/books/
 
