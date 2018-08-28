@@ -15,6 +15,11 @@ public class Ford extends Car {
         return 150;
     }*/
 
+    /*@Override
+    public int speedLimit() {
+        return 150;
+    }*/
+
     @Override
     public int speedLimit() {
         return 150;

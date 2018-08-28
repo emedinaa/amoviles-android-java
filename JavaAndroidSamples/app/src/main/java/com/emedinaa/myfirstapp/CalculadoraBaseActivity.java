@@ -16,7 +16,8 @@ public class CalculadoraBaseActivity extends AppCompatActivity implements View.O
 
     private View iviSum,iviSubtract,iviMultiply,iviDivide;
 
-    private int op1,op2,op;
+    private int op1,op2;
+    double op;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,30 +48,48 @@ public class CalculadoraBaseActivity extends AppCompatActivity implements View.O
     public void onClick(View v) {
 
         //TODO capturar valores
+        String mOp1= editTextOp1.getText().toString().trim();
+        String mOp2= editTextOp2.getText().toString().trim();
+
+        Log.d("CONSOLE", "mop1 "+mOp1);
+        Log.d("CONSOLE", "mop2 "+mOp2);
+        if(mOp1.isEmpty() || mOp2.isEmpty())return;
+
+        op1= Integer.parseInt(mOp1);
+        op2= Integer.parseInt(mOp2);
+        //if(op2==0)return;
 
         //TODO operaciones
         switch (v.getId())
         {
             case R.id.iviSum:
                 Log.v(TAG, "sumar");
+                op= op1+op2;
                 break;
 
             case R.id.iviSubtract:
                 Log.v(TAG, "restar");
+                op= op1-op2;
                 break;
 
             case R.id.iviMultiply:
                 Log.v(TAG, "multiplicar");
+                op= op1*op2;
                 break;
 
             case R.id.iviDivide:
                 Log.v(TAG, "dividir");
+                if(op2>0){
+                    op= op1/(op2*1.0);
+                }else{
+                    op=0;
+                }
                 break;
-
         }
 
         //TODO mostrar resultados
-        tviOp.setText("Resultado ");
+        Log.d("CONSOLE", "op "+op);
+        tviOp.setText("Resultado : "+op);
 
     }
 

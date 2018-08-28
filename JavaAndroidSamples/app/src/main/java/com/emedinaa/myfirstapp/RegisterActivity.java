@@ -24,7 +24,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //ui();
+        ui();
     }
 
     private void ui() {
@@ -39,11 +39,11 @@ public class RegisterActivity extends AppCompatActivity {
         butSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*if (validateForm()) {
+                if (validateForm()) {
                     //enviar al servidor
                     //Toast.makeText(getActivity(),"Enviando al servidor",Toast.LENGTH_LONG).show();
                     showMessage();
-                }*/
+                }
             }
         });
     }
@@ -121,7 +121,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this)
-                .setTitle("")
+                .setTitle("Aviso!")
                 .setMessage("Enviar al servidor...")
                 .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
