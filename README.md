@@ -1,15 +1,17 @@
 # amoviles-android-java
-Curso de Aplicaciones Android con Java - 48h - Academia Móviles
+# Curso de Aplicaciones Android con Java - 48h - Academia Móviles
 
-# Instructor :
+## Lesson3 - Tuesday, August 28, 2018
 
-Eduardo José Medina Alfaro 
+- Review
 
-e-mail : emedinaa@gmail.com
+- Lesson
 
-Android Developer Senior at Belatrix & Mapsalud https://www.linkedin.com/in/emedinaa/
+- Samples
 
-##
+- Homework
+
+- Resources
 
 # Temario :
 
