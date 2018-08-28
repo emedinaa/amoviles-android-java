@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyFirstApp</string>
+    <string name="hello_world">Hello World with Java!</string>
+
+    <string name="seleccionar">Seleccionar</string>
+    <string name="sign_up">Sign Up</string>
+</resources>
