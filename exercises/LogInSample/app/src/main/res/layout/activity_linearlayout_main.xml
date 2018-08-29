@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_instagram_logo"
+        android:layout_margin="14dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:hint="@string/username"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:hint="@string/password"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_in"/>
+
+</LinearLayout>
