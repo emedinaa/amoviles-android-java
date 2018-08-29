@@ -73,7 +73,7 @@ Interfaz de usuario en Android
 
 Layouts
 
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/layoutparams.png?raw=true" height="320" />
+<img src="https://developer.android.com/images/layoutparams.png?hl=es-419?raw=true" height="320" />
 
 - LinearLayout
 
