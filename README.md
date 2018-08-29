@@ -201,6 +201,12 @@ y la carpeta "exercises" , donde encontrarán ejercicios que pueden realizar rel
 
 ### Resources
 
+- Android Jetpack https://developer.android.com/jetpack/?hl=es-419
+
+- User Interface & Navigation https://developer.android.com/guide/topics/ui/declaring-layout?hl=es-419
+
+- Device compatibility https://developer.android.com/guide/practices/compatibility
+
 - User Interface & Navigation https://developer.android.com/guide/topics/ui/
 
 - Layouts https://developer.android.com/guide/topics/ui/declaring-layout
