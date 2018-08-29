@@ -1,48 +1,108 @@
-# amoviles-android-java
-Curso de Aplicaciones Android con Java - 48h - Academia Móviles
+## Lesson4 - Wednesday, August 29, 2018
 
-# Instructor :
+- Review
 
-Eduardo José Medina Alfaro 
+- Lesson
 
-e-mail : emedinaa@gmail.com
+- Samples
 
-Android Developer Senior at Belatrix & Mapsalud https://www.linkedin.com/in/emedinaa/
+- Homework
 
-##
+- Resources
 
-# Temario :
+### Lesson
 
-- Java para mobile developers
+User Events
+  - Widgets
+  - User Events
 
-- Fundamentos de Android
+UI components
 
-- Entorno de desarrollo
+- Buttons
+- Checkboxes
+- Radio buttons
+- Campos de textos y labels
+- Spinners
+- Pickers
 
-- GUI básico (Interfaz de usuario)
+Material design for Android https://developer.android.com/guide/topics/ui/look-and-feel/
 
-- GUI Avanzando (Interfaz de usuario)
+Eventos
 
-- Eventos
+```java
+ btnSignUp =(Button)findViewById(R.id.btnSignUp);
+ 
+ ...
+ 
+   btnSignUp.setOnClickListener(new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            //action
+        }
+  });
+```
 
-- Herramientas de Debugging
+```java
+  rbGenero.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+              @Override
+              public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+                  switch (checkedId) {
+                      case R.id.rbM:
+                          genero = 1;
+                          break;
+                      case R.id.rbF:
+                          genero = 2;
+                          break;
+                  }
+              }
+  });
+```
 
-- GUI usando Fragments
+```java
 
-- Content Providers y broadcast receivers
+  spLocation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+              @Override
+              public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                  Log.v("CONSOLE", "spLocation" + adapterView.getAdapter().getItem(i));
+                  localidad = adapterView.getAdapter().getItem(i).toString();
+              }
 
-- Base de Datos
+              @Override
+              public void onNothingSelected(AdapterView<?> adapterView) {
 
-- REST , conexión remota
+              }
+          });
+  }
+```
 
-- Geolocalización
+### Samples
 
-- Internacionalización
+- UIEvents
 
-- Sensores
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/ui-events.png" height="360" /> 
 
-- Google maps
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/ui-events2.png" height="360" /> 
 
-- Multimedia
+- DialogSamples
 
-- Publicación Google Play
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/dialogs-1.png" height="360" /> <img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/dialogs-2.png" height="360" /> 
+
+- NavigationSamples
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/navigation1.png" height="360" /> <img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/navigation-2.png" height="360" />
+
+### Resources
+
+- User Events https://developer.android.com/guide/topics/ui/ui-events.html
+
+- Controles de entrada https://developer.android.com/guide/topics/ui/controls.html
+
+- Android Design https://developer.android.com/design/
+
+- Material Design for Android https://developer.android.com/guide/topics/ui/look-and-feel/
+
+- Recursos de diseño  https://www.uplabs.com/
+
+- Material design kit https://materialdesignkit.com/templates/
+
+- KeyEvent https://developer.android.com/reference/android/view/KeyEvent
