@@ -11,13 +11,13 @@ public class UIActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_ui);
 
         //LinearLayout
-        setContentView(R.layout.activity_linear_vertical);
+        //setContentView(R.layout.activity_linear_vertical);
         //setContentView(R.layout.activity_linear_horizontal);
 
         //RelativeLayout
         //setContentView(R.layout.activity_relative);
         //setContentView(R.layout.layout_relative_transparent);
-        //setContentView(R.layout.layout_relative_example);
+        setContentView(R.layout.layout_relative_example);
 
         //ConstraintLayout
         //setContentView(R.layout.activity_constraint_layout);
