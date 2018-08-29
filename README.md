@@ -114,3 +114,6 @@ Navigation
 - KeyEvent https://developer.android.com/reference/android/view/KeyEvent
 
 - Tasks & Back stack https://developer.android.com/guide/components/activities/tasks-and-back-stack
+
+- Build your first app https://developer.android.com/training/basics/firstapp/?hl=es-419
+
