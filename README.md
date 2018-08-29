@@ -75,6 +75,10 @@ Eventos
   }
 ```
 
+Navigation
+
+<img src="https://developer.android.com/images/fundamentals/diagram_backstack_singletask_multiactivity.png" height="360" />
+
 ### Samples
 
 - UIEvents
@@ -108,3 +112,5 @@ Eventos
 - Material design kit https://materialdesignkit.com/templates/
 
 - KeyEvent https://developer.android.com/reference/android/view/KeyEvent
+
+- Tasks & Back stack https://developer.android.com/guide/components/activities/tasks-and-back-stack
