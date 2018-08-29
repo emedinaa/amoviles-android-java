@@ -93,6 +93,8 @@ Eventos
 
 ### Resources
 
+- Touch & input https://developer.android.com/guide/input/
+
 - User Events https://developer.android.com/guide/topics/ui/ui-events.html
 
 - Controles de entrada https://developer.android.com/guide/topics/ui/controls.html
