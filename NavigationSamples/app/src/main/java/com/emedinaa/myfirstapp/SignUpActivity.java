@@ -30,7 +30,7 @@ public class SignUpActivity extends AppCompatActivity {
         iviBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoLogIn();
+                backToLogIn();
             }
         });
     }
@@ -41,7 +41,7 @@ public class SignUpActivity extends AppCompatActivity {
         finish();
     }
 
-    private void gotoLogIn() {
+    private void backToLogIn() {
         //Intent intent= new Intent(this,LogInActivity.class);
         //startActivity(intent);
         finish();

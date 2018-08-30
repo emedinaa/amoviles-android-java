@@ -14,7 +14,7 @@ public class LogInActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        extras();
+        //extras();
         ui();
     }
 
@@ -48,10 +48,14 @@ public class LogInActivity extends BaseActivity {
         finish();
     }
 
-    private void gotoSignUp() {
-        //Intent intent= new Intent(this,SignUpActivity.class);
-        //startActivity(intent);
+    /*private void gotoMain() {
+        next(MainActivity.class,null,false);
+    }*/
 
-        next(SignUpActivity.class,null,false);
+    private void gotoSignUp() {
+        Intent intent= new Intent(this,SignUpActivity.class);
+        startActivity(intent);
+
+        //next(SignUpActivity.class,null,false);
     }
 }

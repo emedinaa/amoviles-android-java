@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.regex.Matcher;
@@ -74,6 +73,10 @@ public class FormularioActivity extends BaseActivity {
         btnSignUp.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                /*if(validateForm()){
+
+                }
                 if(validateFormError())
                 {
                     Toast.makeText(FormularioActivity.this, "Enviar al servidor...",
@@ -82,7 +85,7 @@ public class FormularioActivity extends BaseActivity {
                 {
                     Toast.makeText(FormularioActivity.this, "Revisar campos",
                             Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
         });
         rbGenero.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
