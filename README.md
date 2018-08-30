@@ -22,7 +22,6 @@
 
 Activities
 
-- Completemos los ejemplos de la clase 4 , NavigationSamples https://github.com/emedinaa/amoviles-android-basic-intermediate/tree/Lesson4/NavigationSamples
 
 ## Lesson
 
@@ -343,7 +342,7 @@ Si es un recyclerView , no contamos con un listener por defecto , pero agregué 
 
 ## Homework
 
-- Realizar los ejercicios AdapterBasic3,AdapterBasic-IV y Adapters-III. https://github.com/emedinaa/amoviles-android-basic-intermediate/tree/Lesson3/exercises
+- Realizar los ejercicios AdapterBasic3,AdapterBasic-IV y Adapters-III. https://github.com/emedinaa/amoviles-android-java/tree/Lesson5-Adapters
 
 ## Resources 
 
