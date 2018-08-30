@@ -10,6 +10,17 @@
 
 - Resources
 
+### Review
+
+¿Qué vimos la clase pasada?
+
+- Layouts : LinearLayout, RelativeLayout , ConstraintLayout
+- Shapes , Drawable, Mipmap, Colores en hexadeximal
+
+Actividades 
+
+Realicemos la maquetación del ejercicio #6 https://github.com/emedinaa/amoviles-android-java/tree/Lesson4-Events/exercises/06
+
 ### Lesson
 
 User Events
@@ -115,6 +126,8 @@ Common intents https://developer.android.com/guide/components/intents-common?hl=
 <img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/navigation1.png" height="360" /> <img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/navigation-2.png" height="360" />
 
 ### Homework
+
+Realicen la maquetación de los ejercicios #5 , #6 usando Constraintlayout
 
 ### Resources
 
