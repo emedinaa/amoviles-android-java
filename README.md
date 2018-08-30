@@ -114,6 +114,8 @@ Common intents https://developer.android.com/guide/components/intents-common?hl=
 
 <img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/navigation1.png" height="360" /> <img src="https://github.com/learning-android-pe/training-resources/blob/master/ui/navigation-2.png" height="360" />
 
+### Homework
+
 ### Resources
 
 - Touch & input https://developer.android.com/guide/input/
