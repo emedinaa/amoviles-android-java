@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.emedinaa.myfirstapp.model.MyEntity;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -28,14 +30,13 @@ public class SplashActivity extends AppCompatActivity {
 
     }
 
-    private void goToLogIn(){
+    /*private void goToLogIn(){
         Intent intent= new Intent(this,LogInActivity.class);
-
         startActivity(intent);
         finish();
-    }
+    }*/
 
-    /*private void goToLogIn(){
+    private void goToLogIn(){
         //1. En que pantalla estoy
         //2. A que pantalla quiero ir
         //3. Voy a regresar, la vista se destruye
@@ -52,5 +53,5 @@ public class SplashActivity extends AppCompatActivity {
 
         startActivity(intent);
         finish();
-    }*/
+    }
 }

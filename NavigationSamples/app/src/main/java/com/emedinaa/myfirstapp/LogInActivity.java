@@ -14,14 +14,16 @@ public class LogInActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        //extras();
+        extras();
         ui();
     }
 
     private void extras(){
         if(getIntent()!=null && getIntent().getExtras()!=null){
             Bundle bundle= getIntent().getExtras();
-            userId= bundle.getString("USERID",null);
+            if(bundle.containsKey("USERID")){
+                userId= bundle.getString("USERID",null);
+            }
         }
     }
     private void ui() {
@@ -42,15 +44,15 @@ public class LogInActivity extends BaseActivity {
         });
     }
 
-    private void gotoMain() {
+    /*private void gotoMain() {
         Intent intent= new Intent(this,MainActivity.class);
         startActivity(intent);
         finish();
-    }
-
-    /*private void gotoMain() {
-        next(MainActivity.class,null,false);
     }*/
+
+    private void gotoMain() {
+        next(MainActivity.class,null,true);
+    }
 
     private void gotoSignUp() {
         Intent intent= new Intent(this,SignUpActivity.class);
