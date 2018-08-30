@@ -127,7 +127,7 @@ Common intents https://developer.android.com/guide/components/intents-common?hl=
 
 ### Homework
 
-Realicen la maquetación de los ejercicios #5 , #6 usando Constraintlayout
+Realicen la maquetación de los ejercicios #5 , #6 usando Constraintlayout https://github.com/emedinaa/amoviles-android-java/tree/Lesson4-Events/exercises
 
 ### Resources
 
