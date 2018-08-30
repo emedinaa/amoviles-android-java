@@ -25,17 +25,6 @@ Activities
 
 ## Lesson
 
-- Desarrollar aplicaciones usando Material Design 
-- Implementar listas en los aplicativos
-- Conocer el uso de RecyclerView y Adapter
-- Implementar listas personalizadas
-- Mejorando el aspecto de los ampliativos usando CardView 
-- Uso de control de versiones (Git)
-- Sincronizar proyectos a Github con Android Studio
-- Conocer el uso de Fragment
-- Implementar Fragment dinámicos o estáticos 
-- Interfaz de usuario (pestañas / Tabs)
-
 ## RecyclerView & Adapters
 
   - Adapters
