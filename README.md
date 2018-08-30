@@ -79,6 +79,25 @@ Navigation
 
 <img src="https://developer.android.com/images/fundamentals/diagram_backstack_singletask_multiactivity.png" height="360" />
 
+Intents
+
+```
+// Create the text message with a string
+Intent sendIntent = new Intent();
+sendIntent.setAction(Intent.ACTION_SEND);
+sendIntent.putExtra(Intent.EXTRA_TEXT, textMessage);
+sendIntent.setType("text/plain");
+
+// Verify that the intent will resolve to an activity
+if (sendIntent.resolveActivity(getPackageManager()) != null) {
+    startActivity(sendIntent);
+}
+```
+
+<img src="https://developer.android.com/images/components/intent-filters@2x.png?hl=es-419" height="360" />
+
+Common intents https://developer.android.com/guide/components/intents-common?hl=es-419
+
 ### Samples
 
 - UIEvents
@@ -116,4 +135,6 @@ Navigation
 - Tasks & Back stack https://developer.android.com/guide/components/activities/tasks-and-back-stack
 
 - Build your first app https://developer.android.com/training/basics/firstapp/?hl=es-419
+
+- Intents & intent Filters https://developer.android.com/guide/components/intents-filters?hl=es-419
 
