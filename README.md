@@ -199,6 +199,9 @@ y la carpeta "exercises" , donde encontrarán ejercicios que pueden realizar rel
 
 ### Homework
 
+Realizar la maquetación del siguiente diseño http://android.inspired-ui.com/tagged/app_nwplyng
+* Usar imágenes y colores referenciales
+
 ### Resources
 
 - Android Jetpack https://developer.android.com/jetpack/?hl=es-419
