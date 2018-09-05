@@ -1,4 +1,4 @@
-## Lesson 5 - Monday, August 30, 2018
+## Lesson 5 - Tuesday, September 4, 2018
 
 - Review
 
