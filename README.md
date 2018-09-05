@@ -28,7 +28,7 @@ emedinaa@gmail.com con asunto "Android con Java G30-Q - Tarea X"
 
 - GUI básico (Interfaz de usuario)
 
-- GUI Avanzando (Interfaz de usuario)
+- GUI Avanzado (Interfaz de usuario)
 
 - Eventos
 
