@@ -1,0 +1,5 @@
+<resources>
+    <string name="hello_world">Hello World with Java!</string>
+    <string name="app_name">FragmentSamples</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
