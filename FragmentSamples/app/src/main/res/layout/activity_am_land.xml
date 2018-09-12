@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:padding="10dp"
+    tools:context=".AMActivity">
+
+    <fragment
+        android:id="@+id/fragmentL"
+        android:name="com.emedinaa.myfirstapp.AM1Fragment"
+        tools:layout="@layout/fragment_am1"
+        android:layout_width="0dp"
+        android:layout_weight="0.3"
+        android:layout_height="match_parent"
+        android:layout_marginRight="4dp"/>
+
+    <fragment
+        android:id="@+id/fragmentR"
+        android:name="com.emedinaa.myfirstapp.AM1Fragment"
+        tools:layout="@layout/fragment_am1"
+        android:layout_width="0dp"
+        android:layout_weight="0.7"
+        android:layout_height="match_parent" />
+</LinearLayout>

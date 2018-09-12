@@ -14,10 +14,10 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".StarWarsEventsActivity" />
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".StarWarsEventsFragmentActivity" />
@@ -31,6 +31,14 @@
         <activity android:name=".FragmentBasicActivity" />
         <activity android:name=".FragmentProgrammingActivity" />
         <activity android:name=".FragmentCommunicationActivity" />
+        <activity android:name=".AMActivity"
+            android:screenOrientation="landscape">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
     </application>
 
 </manifest>
