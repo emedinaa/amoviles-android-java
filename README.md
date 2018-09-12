@@ -261,12 +261,17 @@ Comunicación Fragment con Fragment
 
 
 ## Homework
-
+- Realizar los ejercicios  01, 02 sobre Fragments
 
 ## Resources 
 
-Support different screen sizes  https://developer.android.com/training/multiscreen/screensizes?hl=es-419
+- Support different screen sizes  https://developer.android.com/training/multiscreen/screensizes?hl=es-419
 
+- Fragment https://developer.android.com/reference/android/app/Fragment.html
+
+- Developer Guides : Fragments https://developer.android.com/guide/components/fragments.html
+
+- Building a Dynamic UI with Fragments https://developer.android.com/training/basics/fragments/index.html
 
 
 
