@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.emedinaa.myfirstapp.R;
+import com.emedinaa.myfirstapp.interfaces.RecipeHandler;
 import com.emedinaa.myfirstapp.model.RecipeEntity;
 
 import java.util.List;
@@ -20,10 +21,18 @@ public class RecipeAdapter extends BaseAdapter{
 
     private List<RecipeEntity> recetas;
     private final Context context;
+    private RecipeHandler listener;
 
     public RecipeAdapter(List<RecipeEntity> recetas, Context context) {
         this.recetas = recetas;
         this.context = context;
+        //this.listener= (RecipeHandler) (context);
+    }
+
+    public RecipeAdapter(List<RecipeEntity> recetas, Context context, RecipeHandler recipeHandler) {
+        this.recetas = recetas;
+        this.context = context;
+        this.listener= recipeHandler;
     }
 
     @Override
@@ -70,8 +79,31 @@ public class RecipeAdapter extends BaseAdapter{
                 iviFavorite.setVisibility(View.GONE);
             }
         }
+        //events
+        /*view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //goToRecipeDetails(receta);
+                if(listener!=null){
+                    listener.selectedRecipe(receta);
+                }
+            }
+        });*/
+        iviFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(listener!=null){
+                    listener.selectedRecipe(receta);
+                }
+            }
+        });
         return  view;
     }
+
+   /* private void goToRecipeDetails(RecipeEntity recipeEntity){
+        Toast.makeText(context, "Adapter - receta "+recipeEntity,
+                Toast.LENGTH_SHORT).show();
+    }*/
 
     private String checkNotNull(String value){
         String string ;

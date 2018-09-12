@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity
             android:name=".AdaptersIActivity"
@@ -27,11 +27,19 @@
         <activity
             android:name=".AdaptersIIIActivity"
             android:label="Adapters III"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".AdaptersIVActivity"
             android:label="Adapters IV"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+
+        </activity>
         <activity
             android:name=".AdaptersVActivity"
             android:label="Adapters V"
@@ -51,7 +59,8 @@
         <activity
             android:name=".AdapterBasicIVActivity"
             android:label="Adapter Basic IV"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+        </activity>
         <activity
             android:name=".AdapterBasicVActivity"
             android:label="Adapter Basic V"

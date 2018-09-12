@@ -53,4 +53,15 @@ public class Pokemon implements Serializable {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
+
+    @Override
+    public String toString() {
+        return "Pokemon{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", type1=" + type1 +
+                ", desc='" + desc + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
+    }
 }

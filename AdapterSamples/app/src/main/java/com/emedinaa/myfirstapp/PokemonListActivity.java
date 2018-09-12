@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.emedinaa.myfirstapp.adapter.PokemonAdapter;
 import com.emedinaa.myfirstapp.data.PokemonData;
@@ -16,6 +17,14 @@ import java.util.List;
 
 public class PokemonListActivity extends BaseActivity  {
 
+    /**
+     * 1. Origen de datos : PokemonData
+     * 2. Entidad :Pokemon
+     * 3. Row : row_pokemon
+     * 4. Container : recyclerViewPokemon
+     * 5. Adapter : PokemonAdapter
+     * 6. Setear adapter al recycler
+     */
     private final int DEFAULT_SPANCOUNT=3;
     private RecyclerView recyclerViewPokemon;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -58,6 +67,8 @@ public class PokemonListActivity extends BaseActivity  {
             public void onClick(View view, int position) {
                 if(pokemonList!=null){
                     Pokemon pokemon= pokemonList.get(position);
+                    Toast.makeText(PokemonListActivity.this, "pokemon "+pokemon,
+                            Toast.LENGTH_SHORT).show();
                     goToDetails(pokemon);
                 }
             }

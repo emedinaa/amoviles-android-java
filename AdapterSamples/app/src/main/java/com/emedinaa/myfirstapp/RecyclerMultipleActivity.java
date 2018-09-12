@@ -12,6 +12,14 @@ import java.util.List;
 
 public class RecyclerMultipleActivity extends BaseActivity {
 
+    /*
+        1. Origen de datos MultipleData
+        2. Entidad PlaceEntity MovieEntity
+        3. Container : rviewMultiple
+        4. Row : row_place.xml row_movie_list.xml
+        5. Adapter :MultipleRecyclerAdapter
+        6. setear adapter al recycler
+     */
     private RecyclerView rviewMultiple;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView.Adapter adapter;

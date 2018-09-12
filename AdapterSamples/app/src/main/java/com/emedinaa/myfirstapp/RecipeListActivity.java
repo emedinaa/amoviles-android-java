@@ -3,18 +3,17 @@ package com.emedinaa.myfirstapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.emedinaa.myfirstapp.adapter.RecipeAdapter;
 import com.emedinaa.myfirstapp.data.RecipeData;
+import com.emedinaa.myfirstapp.interfaces.RecipeHandler;
 import com.emedinaa.myfirstapp.model.RecipeEntity;
 
 import java.util.List;
 
-public class RecipeListActivity extends BaseActivity {
+public class RecipeListActivity extends BaseActivity implements RecipeHandler{
 
     private ListView listViewRecipe;
     private List<RecipeEntity> recipes;
@@ -34,7 +33,7 @@ public class RecipeListActivity extends BaseActivity {
         recipes= recetaRepo.getRecipes();
 
         //adapter
-        RecipeAdapter recetaAdapter= new RecipeAdapter(recipes,this);
+        RecipeAdapter recetaAdapter= new RecipeAdapter(recipes,this,this );
 
         //setAdapter al view
         listViewRecipe.setAdapter(recetaAdapter);
@@ -43,7 +42,7 @@ public class RecipeListActivity extends BaseActivity {
     private void ui() {
         listViewRecipe= (ListView) findViewById(R.id.listViewRecipe);
         //events
-        listViewRecipe.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*listViewRecipe.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView,
                                     View view, int position, long l) {
@@ -52,7 +51,7 @@ public class RecipeListActivity extends BaseActivity {
                     goToRecipeDetails(receta);
                 }
             }
-        });
+        });*/
     }
 
     private void goToRecipeDetails(RecipeEntity receta) {
@@ -65,7 +64,12 @@ public class RecipeListActivity extends BaseActivity {
         //startActivity(intent);
 
         Log.v("CONSOLE","receta "+receta );
-        Toast.makeText(this, "receta "+receta,
+        Toast.makeText(this, "Activity - receta "+receta,
                 Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void selectedRecipe(RecipeEntity recipeEntity) {
+        goToRecipeDetails(recipeEntity);
     }
 }
