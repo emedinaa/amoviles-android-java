@@ -48,10 +48,18 @@ public class FragmentProgrammingActivity extends AppCompatActivity implements Bl
 
     }
 
+    @Override
+    public void loQueYoQuiera() {
+
+    }
+
     private void addFragment(){
         BlankFragment blankFragment=new BlankFragment();
+        AM1Fragment am1Fragment = new AM1Fragment();
+
         FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.frameLayoutContainer,blankFragment,"BlankFragment");
+        //fragmentTransaction.add(R.id.frameLayoutContainer,blankFragment,"BlankFragment");
+        fragmentTransaction.add(R.id.frameLayoutContainer,am1Fragment,"AM1Fragment");
         fragmentTransaction.commit();
 
         //fragmentManager.findFragmentByTag()

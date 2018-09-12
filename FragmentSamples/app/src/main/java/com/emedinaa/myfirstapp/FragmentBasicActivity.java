@@ -59,6 +59,11 @@ implements BlankFragmentListener {
     }
 
     @Override
+    public void loQueYoQuiera() {
+
+    }
+
+    @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;

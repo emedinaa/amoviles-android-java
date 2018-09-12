@@ -107,6 +107,13 @@ public class BlankFragment extends Fragment {
             }
         });
 
+        if(mListener!=null){
+            mListener.loQueYoQuiera();
+        }
+
+        //((FragmentCommunicationActivity)getActivity()).otroMetodo();
+        //FragmentCommunicationActivity.otroSuperMetodo();
+
         //( (FragmentBasicActivity)(getActivity())).llamarAPapa2();
         //FragmentBasicActivity.llamarAPapa();
 
@@ -126,11 +133,11 @@ public class BlankFragment extends Fragment {
         });*/
 
         //Toast.makeText(getActivity(),"Hola desde fragment ",Toast.LENGTH_LONG).show();
-        Log.v("CONSOLE", "1. BlankFragment");
+        /*Log.v("CONSOLE", "1. BlankFragment");
         if(mListener!=null){
             Log.v("CONSOLE", "2. Enviar desde BlankFragment");
             mListener.callToActivity("Lo que sea ");
-        }
+        }*/
     }
 
     public void ejecutarAccionDesdeFragment(String message){

@@ -12,4 +12,6 @@ public interface BlankFragmentListener {
     void callToActivity(Object object);
 
     void cerrarSesion();
+
+    void loQueYoQuiera();
 }

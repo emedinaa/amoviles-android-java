@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -29,10 +30,18 @@ implements BlankFragmentListener {
         fragmentManager= getSupportFragmentManager();
         blankFragment= (BlankFragment)fragmentManager.findFragmentById(R.id.blankFragment);
 
-        //blankFragment.ejecutarAccionDesdeFragment("Hola Fragment");
+        //blankFragment.ejecutarAccionDesdeFragment("Hola Fragment lanzado por el activity");
+
+        //blankFragment.cambiarColorFondo();
     }
 
-    public void otroMetodo(){}
+    public static void otroSuperMetodo(){
+        Log.v("CONSOLE","Hello Activity, lanzado desde fragment");
+    }
+
+    public void otroMetodo(){
+        Toast.makeText(this,"Hello Activity, lanzado desde fragment",Toast.LENGTH_LONG).show();
+    }
 
     @Override
     public void actionFragment(Object object) {
@@ -53,6 +62,11 @@ implements BlankFragmentListener {
     @Override
     public void cerrarSesion() {
 
+    }
+
+    @Override
+    public void loQueYoQuiera() {
+        Toast.makeText(this,"Hello Activity, lanzado desde fragment",Toast.LENGTH_LONG).show();
     }
 
     @Override
