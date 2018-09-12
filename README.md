@@ -1,4 +1,4 @@
-## Lesson 6 - Thursday, September 6, 2018
+## Lesson 7 - Tuesday, September 11, 2018
 
 - Review
 
@@ -14,340 +14,258 @@
 
 ¿Qué temas vimos en la clase pasada ?
 
-- Layouts : LinearLayout , RelativeLayout, ConstraintLayout
-
-- Componentes de Interfaz de Usuario : EditTextView, Button, TextView
-
-- Eventos de Usuario : Click, Teclado, Listas
-
 Activities
 
 
 ## Lesson
 
-## RecyclerView & Adapters
+### Fragments, conceptos y comunicación.
 
-  - Adapters
-  - Custom Adapters
-  - RecyclerView
-  - Events
-  - Exercises
+- Fragments
 
-## Adapters
-<img src="https://camo.githubusercontent.com/fc6df9d5fd6d78e48d6802c77ad7264a6a787672/68747470733a2f2f692e696d6775722e636f6d2f6d6b38324a64322e6a7067" />
+- Creating a Fragment
 
-Los Adapters son los intermediarios entre el origen de datos y el componente visual.
-Respecto al origen de datos , contamos con los siguiente componentes :
-- List
-- ArrayList
-- Array
+- Fragment Lifecycle
 
-y a los componentes visuales, tenemos :
+- Communicating with the Activity
 
-- ListView
-- GridView
-- RecyclerView
+- Communication between Fragments
 
-Los Adapters son los que asocian la colección de datos con las  celdas de nuestras vistas , tambien te permiten realizar cambios sobre ellas. Es decir, agregar, modificar o eliminar un elemento de nuestra lista .
+- Exercises
 
-ListView & GridView
+### Conociendo los Fragments
 
-<img src="https://developer.android.com/images/ui/listview.png" /> <img src="https://developer.android.com/images/ui/gridview.png" />
+Los fragmentos son vistas con código y diseño(XML) , no necesitan ser registrados en el AndroidManifest y requieren de una actividad como contenedor. Se pueden agregar o quitar a demanda  y tambien cuentan con su propio ciclo de vida. 
+Adicional, una actividad puede contener más de un fragment, es decir , por ejemplo, en una pantalla puede tener 2 fragments.
+Los fragments se usan para construir componentes reusables, evitando duplicación de recursos y de código , además se usa mucho cuando es requerido que una aplicación funcione tanto en un smartphone y tablets.
 
-Tipos :
+![fragments](https://developer.android.com/images/training/basics/fragments-screen-mock.png)
 
-Se dispone de los siguientes tipos de adapters
-- BaseAdapter , cuando necesitemos manejar alguna lista desde cero , recomiendo utilizarlo . Usualmente solicita implementar varios métodos.
+<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson6/images/fragments03.png?raw=true" height="480"/>
 
-- ArrayAdapter , este es un adapter que nos puede servir de base y solo requiere implementar un método.
+<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson6/images/fragments04.png?raw=true" height="480"/>
 
-- CursorAdapter , este es usado cuando interactuamos con base de datos.
+<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson6/images/fragments05.png?raw=true" height="480"/>
 
-## Custom Adapters
 
-Para nosotros poder construir una lista personalizada requerimos los siguientes pasos :
+### Creando un Fragment
 
-1. Origen de datos , no importa si esta colección viene de base de datos, de una archivo json o de la respuesta de la llamada a un servicio web . Al final , solo necesitamos este como una colección de Java : ArrayList, List o Array.
-
-2. Entidad , normalmente nuestras celdas estarán relacionadas a entidades, es decir a un clase modelo que represente el contenido que se va a mostrar en una lista . Por ejemplo, si vamos a mostrar un listado de películas :
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/fragments.png?raw=true" height="480"/>
 
 ```java
-package com.androidbootcamp.androidtemplate.model;
+    import android.os.Bundle;
+    import android.support.v4.app.Fragment;
+    import android.view.LayoutInflater;
+    import android.view.ViewGroup;
 
-/**
- * @author Eduardo Medina
- */
-public class Movie {
-
-    private int id;
-    private String title;
-    private String desc;
-    private double price;
-    private boolean cartelera;
-
-    public Movie(int id, String title, String desc, double price, boolean cartelera) {
-        this.id = id;
-        this.title = title;
-        this.desc = desc;
-        this.price = price;
-        this.cartelera = cartelera;
+    public class ArticleFragment extends Fragment {
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+            // Inflate the layout for this fragment
+            return inflater.inflate(R.layout.article_view, container, false);
+        }
     }
-
-    public Movie(String title, boolean cartelera) {
-        this.title = title;
-        this.cartelera = cartelera;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public boolean isCartelera() {
-        return cartelera;
-    }
-
-    public void setCartelera(boolean cartelera) {
-        this.cartelera = cartelera;
-    }
-}
 ```
-3. La celda ,usualmente las celda que vamos a mostrar de nuestra lista, siempre es personalizada . Es decir, tendremos imágenes, textos , botones . Es deficil ver solo listas con textos, en las aplicaciones siempre vamos a tener listas con diseños personalizados . Para esto , nosotros podemos dibujar nuestras propias celdad usando XML
+
+Una vez creado un fragment, este puede ser insertado como cualquier componente de diseño 
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools">
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
 
-    <TextView
-        android:id="@+id/tviName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:padding="10dp"
-        android:text="Doctor Strange"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent" />
+      <fragment android:name="com.example.android.fragments.HeadlinesFragment"
+                android:id="@+id/headlines_fragment"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:adjustViewBounds="true"
-        android:src="@mipmap/ic_movie"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+      <fragment android:name="com.example.android.fragments.ArticleFragment"
+                android:id="@+id/article_fragment"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
 
-    <ImageView
-        android:id="@+id/iviCartelera"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginEnd="4dp"
-        android:layout_marginTop="4dp"
-        android:adjustViewBounds="true"
-        android:src="@mipmap/ic_ticket"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible"
-        android:layout_marginRight="4dp" />
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
 
 ```
 
-4. El adapter , vamos a requerir construir un adapter para manipular una lista 
+Para poder insertar el Fragment en un activity por programación
 
 ```java
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
-package com.androidbootcamp.androidtemplate.adapter;
-
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.TextView;
-
-import com.androidbootcamp.androidtemplate.R;
-
-
-/**
- * Created by emedinaa on 15/10/15.
- */
-public class SimpleListAdapter extends BaseAdapter {
-
-    private Context context;
-    private String[] data;
-
-    public SimpleListAdapter(Context context, String[] data) {
-        this.context=context;
-        this.data= data;
-    }
-
+public class MainActivity extends FragmentActivity {
     @Override
-    public int getCount() {
-        return data.length;
-    }
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.news_articles);
 
-    @Override
-    public Object getItem(int position) {
-        return data[position];
-    }
+        // Check that the activity is using the layout version with
+        // the fragment_container FrameLayout
+        if (findViewById(R.id.fragment_container) != null) {
 
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
+            // However, if we're being restored from a previous state,
+            // then we don't need to do anything and should return or else
+            // we could end up with overlapping fragments.
+            if (savedInstanceState != null) {
+                return;
+            }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View view;
-        if (convertView == null) {
-            view = LayoutInflater.from(this.context).inflate(R.layout.row_list,parent,false);
-        } else {
-            view = convertView;
+            // Create a new Fragment to be placed in the activity layout
+            HeadlinesFragment firstFragment = new HeadlinesFragment();
+
+            // In case this activity was started with special instructions from an
+            // Intent, pass the Intent's extras to the fragment as arguments
+            firstFragment.setArguments(getIntent().getExtras());
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, firstFragment).commit();
         }
-        TextView  tviTitle=view.findViewById(R.id.tviTitle);
-        tviTitle.setText(data[position]);
-        return view;
     }
 }
 ```
-5. Asociar nuestro adapter con el componente visual
+
+Otra opción podría ser reemplazar un fragment por otro , para lo cual :
 
 ```java
- private String[] mDays = {"Monday", "Tuesday","Wednesday","Thursday","Friday",
-"Saturday", "Sunday"};
-  ...
-  
-  listViewSimple= findViewById(R.id.listViewSimple);
+  // Create fragment and give it an argument specifying the article it should show
+  ArticleFragment newFragment = new ArticleFragment();
+  Bundle args = new Bundle();
+  args.putInt(ArticleFragment.ARG_POSITION, position);
+  newFragment.setArguments(args);
 
-  SimpleListAdapter mySimpleListAdapter= new SimpleListAdapter(this,
-          mDays);
-  lviSimple.setAdapter(mySimpleListAdapter);
+  FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+  // Replace whatever is in the fragment_container view with this fragment,
+  // and add the transaction to the back stack so the user can navigate back
+  transaction.replace(R.id.fragment_container, newFragment);
+  transaction.addToBackStack(null);
+
+  // Commit the transaction
+  transaction.commit();
 ```
 
-## RecyclerView
+### Ciclo de un vida de un Fragment
 
-<img src="https://developer.android.com/training/material/images/RecyclerView.png" />
+![fragments](https://developer.android.com/guide/components/images/activity_lifecycle.png)
 
-## Events
+### Comunicación 
 
-Si es un ListView o GridView , contamos un evento para saber si seleccionamos un item de la lista
+Para poder comunicar un fragment con una actividad(padre) o con otro fragment , usamos interfaces como canal de comunicación
 
 ```java
- listViewMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Movie movie =(Movie) adapterView.getAdapter().getItem(position);
-                String message= movie.getTitle()+ " "+ movie.isCartelera();
-                //String.format("title %s cartela %s ",movie.getTitle(),String.valueOf(movie.isCartelera()) );
-                showItem(message);
+    public class HeadlinesFragment extends ListFragment {
+        OnHeadlineSelectedListener mCallback;
+
+        // Container Activity must implement this interface
+        public interface OnHeadlineSelectedListener {
+            public void onArticleSelected(int position);
+        }
+
+        @Override
+        public void onAttach(Activity activity) {
+            super.onAttach(activity);
+
+            // This makes sure that the container activity has implemented
+            // the callback interface. If not, it throws an exception
+            try {
+                mCallback = (OnHeadlineSelectedListener) activity;
+            } catch (ClassCastException e) {
+                throw new ClassCastException(activity.toString()
+                        + " must implement OnHeadlineSelectedListener");
             }
-});
+        }
+
+        ...
+    }
 ```
 
-Si es un recyclerView , no contamos con un listener por defecto , pero agregué unas clases que nos pueden ayudar con esto :
+La interface puede ser creada de manera independiente o asociada a una actividad con la que se requiere comunicarse
 
 ```java
-   recyclerViewPokemon.addOnItemTouchListener(new RecyclerTouchListener(this, recyclerViewPokemon, new ClickListener() {
-            @Override
-            public void onClick(View view, int position) {
-                if(pokemonList!=null){
-                    Pokemon pokemon= pokemonList.get(position);
-                    goToDetails(pokemon);
-                }
-            }
+  public static class MainActivity extends Activity
+          implements HeadlinesFragment.OnHeadlineSelectedListener{
+      ...
 
-            @Override
-            public void onLongClick(View view, int position) {}
-}));
+      public void onArticleSelected(int position) {
+          // The user selected the headline of an article from the HeadlinesFragment
+          // Do something here to display that article
+      }
+  }
+
 ```
+
+Enviar parámetros a un Fragment, para lo cual usamos la clase "Bundle"
+
+```java
+public static class MainActivity extends Activity
+        implements HeadlinesFragment.OnHeadlineSelectedListener{
+    ...
+
+    public void onArticleSelected(int position) {
+        // The user selected the headline of an article from the HeadlinesFragment
+        // Do something here to display that article
+
+        ArticleFragment articleFrag = (ArticleFragment)
+                getSupportFragmentManager().findFragmentById(R.id.article_fragment);
+
+        if (articleFrag != null) {
+            // If article frag is available, we're in two-pane layout...
+
+            // Call a method in the ArticleFragment to update its content
+            articleFrag.updateArticleView(position);
+        } else {
+            // Otherwise, we're in the one-pane layout and must swap frags...
+
+            // Create fragment and give it an argument for the selected article
+            ArticleFragment newFragment = new ArticleFragment();
+            Bundle args = new Bundle();
+            args.putInt(ArticleFragment.ARG_POSITION, position);
+            newFragment.setArguments(args);
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            // Replace whatever is in the fragment_container view with this fragment,
+            // and add the transaction to the back stack so the user can navigate back
+            transaction.replace(R.id.fragment_container, newFragment);
+            transaction.addToBackStack(null);
+
+            // Commit the transaction
+            transaction.commit();
+        }
+    }
+}
+```
+Comunicación Activity con Fragment
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/fragments-communication1.png?raw=true" height="480"/>
+
+Comunicación Fragment con Activity
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/fragments-communication2.png?raw=true" height="480"/>
+
+Comunicación Fragment con Fragment
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/fragments-communication3.png?raw=true" height="480"/>
+
 ## Samples
-<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/images/samples-01.png?raw=true" height="320"/> <img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/images/samples-02.png?raw=true" height="320"/>
 
-<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/images/samples-03.png?raw=true" height="320"/> <img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/images/samples-04.png?raw=true" height="320"/>
 
 
 ## Exercises
 
-<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/exercises/AdapterBasic-I.png?raw=true" height="320"/> <img src="https://github.com/BrainFriendly/ab-android-fundamentals/blob/L6RecyclerView-Adapters/exercises/AdapterBasic-II.png?raw=true" height="320"/>
-
-<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/exercises/AdapterBasic-III.png?raw=true" height="320"/> <img src="https://github.com/BrainFriendly/ab-android-fundamentals/blob/L6RecyclerView-Adapters/exercises/AdapterBasic-IV.png?raw=true" height="320"/>
-
-<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/exercises/AdapterBasic-V.png?raw=true" height="320"/>
-
-<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/exercises/Adapters-I.png?raw=true" height="320"/> <img src="https://github.com/BrainFriendly/ab-android-fundamentals/blob/L6RecyclerView-Adapters/exercises/Adapters-II.png?raw=true" height="320"/>
-
-<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/exercises/Adapters-III.png?raw=true" height="320"/> <img src="https://github.com/BrainFriendly/ab-android-fundamentals/blob/L6RecyclerView-Adapters/exercises/Adapters-IV.png?raw=true" height="320"/>
-
-<img src="https://github.com/emedinaa/amoviles-android-basic-intermediate/blob/Lesson5/exercises/Adapters-V.png?raw=true" height="320"/>
 
 ## Homework
 
-- Realizar los ejercicios AdapterBasic3,AdapterBasic-IV y Adapters-III. https://github.com/emedinaa/amoviles-android-java/tree/Lesson5-Adapters
 
 ## Resources 
 
-Adapter https://developer.android.com/reference/android/widget/Adapter.html
-
-ListView https://developer.android.com/guide/topics/ui/layout/listview.html
-
-GridView https://developer.android.com/guide/topics/ui/layout/gridview.html
-
-RecyclerView https://developer.android.com/guide/topics/ui/layout/recyclerview.html
-
-Creating List and Cards https://developer.android.com/training/material/lists-cards.html
-
-RecyclerView https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html
-
-Android Developers Fundamentals Course - Create a RecyclerView https://google-developer-training.gitbooks.io/android-developer-fundamentals-course-practicals/content/en/Unit%202/44_p_create_a_recycler_view.html
+Support different screen sizes  https://developer.android.com/training/multiscreen/screensizes?hl=es-419
 
 
 
