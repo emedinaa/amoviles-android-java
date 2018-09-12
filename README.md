@@ -1,4 +1,4 @@
-## Lesson 7 - Tuesday, September 11, 2018
+## Lesson 8 - Thursday, September 13, 2018
 
 - Review
 
