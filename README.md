@@ -273,5 +273,7 @@ Comunicación Fragment con Fragment
 
 - Building a Dynamic UI with Fragments https://developer.android.com/training/basics/fragments/index.html
 
+- Material Design https://material.io/design/components/bottom-navigation.html#behavior
+
 
 
