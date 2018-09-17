@@ -12,11 +12,11 @@
         <activity
             android:name=".MessageActivity"
             android:screenOrientation="landscape" >
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity
             android:name=".MainActivity"
@@ -53,11 +53,11 @@
         <activity
             android:name=".TabFragmentActivity"
             android:screenOrientation="portrait" >
-            <!--<intent-filter>
+            <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>-->
+        </intent-filter>
         </activity>
         <activity android:name=".CardsActivity"
             android:screenOrientation="portrait">

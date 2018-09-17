@@ -8,7 +8,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.emedinaa.myfirstapp.transforms.ZoomOutPageTransformer;
+import com.emedinaa.myfirstapp.transforms.DepthPageTransformer;
 import com.emedinaa.myfirstapp.ui.fragments.ScreenSlideFragment;
 
 public class VPagerScreenSlidesActivity extends AppCompatActivity {
@@ -39,8 +39,8 @@ public class VPagerScreenSlidesActivity extends AppCompatActivity {
         // Instantiate a ViewPager and a PagerAdapter.
         mPager = (ViewPager) findViewById(R.id.pager);
         //Transforms
-        mPager.setPageTransformer(true, new ZoomOutPageTransformer());
-        //mPager.setPageTransformer(true, new DepthPageTransformer());
+        //mPager.setPageTransformer(true, new ZoomOutPageTransformer());
+        mPager.setPageTransformer(true, new DepthPageTransformer());
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
 
