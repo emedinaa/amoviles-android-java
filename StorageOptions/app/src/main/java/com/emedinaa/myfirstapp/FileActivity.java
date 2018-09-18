@@ -22,7 +22,7 @@ import java.io.FileOutputStream;
 public class FileActivity extends BaseActivity {
     private static final int EXTERNAL_STORAGE_PERMISSION_CONSTANT = 100;
     private EditText fname,fcontent;
-    private Button write,read;
+    private Button buttonSave,buttonRead;
 
     private String currentFile=null;
 
@@ -37,15 +37,16 @@ public class FileActivity extends BaseActivity {
     private void ui() {
         fname =findViewById(R.id.editTextName);
         fcontent = findViewById(R.id.editTextContent);
-        write = findViewById(R.id.buttonSave);
-        read = findViewById(R.id.buttonRead);
-        write.setOnClickListener(new View.OnClickListener() {
+        buttonSave = findViewById(R.id.buttonSave);
+        buttonRead = findViewById(R.id.buttonRead);
+
+        buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 writeFile();
             }
         });
-        read.setOnClickListener(new View.OnClickListener() {
+        buttonRead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 readFile();
@@ -54,16 +55,17 @@ public class FileActivity extends BaseActivity {
     }
 
     private void readFile() {
-        if(currentFile==null) return;
+        //if(currentFile==null) return;
         // TODO Auto-generated method stub
+        currentFile="Demo";
         String readfilename = currentFile;
         FileOperations fop = new FileOperations();
         String text = fop.read(readfilename);
         if(text != null){
-            Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG).show();
+            Toast.makeText(this,text,Toast.LENGTH_LONG).show();
         }
         else {
-            Toast.makeText(getApplicationContext(), "File not Found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "File not Found", Toast.LENGTH_SHORT).show();
         }
 
     }

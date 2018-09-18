@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SpExercises</string>
+    <string name="hello_world">Hello World with Java!</string>
+
+    <string name="button_black">black</string>
+    <string name="button_red">red</string>
+    <string name="button_blue">blue</string>
+    <string name="button_green">green</string>
+    <string name="button_save">save</string>
+    <string name="button_reset">reset</string>
+    <string name="log_in">LogIn</string>
+    <string name="username">Username</string>
+    <string name="email">E-mail</string>
+    <string name="email_hint">abc@abc.com</string>
+    <string name="username_hint">Eduardo Medina A.</string>
+    <string name="notifications">Notifications</string>
+</resources>
