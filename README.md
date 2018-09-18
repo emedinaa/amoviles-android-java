@@ -26,7 +26,7 @@ Te permite almacenar información del tipo <key, value>, donde la única forma d
 Para instanciar el SP , realizamos lo siguiente 
 
 ```java
-   sharedPreferences=getSharedPreferences("com.belatrix.sharedpref", Context.MODE_PRIVATE);
+   sharedPreferences=getSharedPreferences("com.amoviles.sharedpref", Context.MODE_PRIVATE);
 ```
 Donde el primer parámetro es el nombre que vamos a usar para este SP y luego , el segundo , es para definir el nivel de privacidad :
 
