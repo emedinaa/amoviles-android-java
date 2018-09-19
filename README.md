@@ -132,5 +132,7 @@ int highScore = sharedPref.getInt(getString(R.string.saved_high_score_key), defa
 
 - SharedPreferences https://developer.android.com/training/data-storage/shared-preferences.html
 
+- Uplabs https://www.uplabs.com/android
+
 
 
