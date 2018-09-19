@@ -10,13 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SharedPrefIActivity">
-
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
+            </intent-filter>-->
         </activity>
         <activity android:name=".two.SharedPrefIIActivity">
             <!--<intent-filter>
@@ -58,7 +56,14 @@
         </activity>
         <activity android:name=".two.ColorIIActivity" />
         <activity android:name=".three.ColorIIIActivity" />
-        <activity android:name=".three.LogInIIIActivity"></activity>
+        <activity android:name=".three.LogInIIIActivity"/>
+        <activity android:name=".LogInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
