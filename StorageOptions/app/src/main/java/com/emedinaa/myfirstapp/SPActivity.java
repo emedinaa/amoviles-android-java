@@ -38,8 +38,8 @@ public class SPActivity extends AppCompatActivity {
     }
 
     private void saveSP(){
-        saveStringKey("USERNAME","EDU");
-        saveStringKey("PASSWORD","123456");
+        saveStringKey("USERNAME","José");
+        saveStringKey("PASSWORD","87654321");
     }
 
     private void clearSP(){
@@ -77,11 +77,11 @@ public class SPActivity extends AppCompatActivity {
         ui();
         setUpSharedPreferences();
 
-        PreferencesHelper.saveSession(this,"edu","123456");
-        boolean session= PreferencesHelper.isSignedIn(this);
-        String username= PreferencesHelper.getUserSession(this);
+        //PreferencesHelper.saveSession(this,"edu","123456");
+        //boolean session= PreferencesHelper.isSignedIn(this);
+        //String username= PreferencesHelper.getUserSession(this);
 
-        log("session "+session+ " username "+username);
+        //log("session "+session+ " username "+username);
         //save
         //saveStringKey("USERNAME","edu");
         //saveStringKey("PASSWORD","123456");
@@ -103,9 +103,7 @@ public class SPActivity extends AppCompatActivity {
     }
 
     private void setUpSharedPreferences(){
-
         //getSharedPreferences("com.amoviles.sharedpref",Context.MODE_PRIVATE);
-
         sharedPreferences=getSharedPreferences("com.amoviles.sharedpref", Context.MODE_PRIVATE);
         //sharedPreferences=getSharedPreferences("DEMO", Context.MODE_APPEND);
         sharedPreferencesEditor= sharedPreferences.edit();

@@ -2,14 +2,14 @@ package com.emedinaa.myfirstapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.emedinaa.myfirstapp.storage.PreferencesHelper;
+import com.emedinaa.myfirstapp.ui.BaseActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     private static final long SPLASH_SCREEN_DELAY = 2000;
 
@@ -35,6 +35,7 @@ public class SplashActivity extends AppCompatActivity {
                 }else{
                     //go To Dashboard
                 }*/
+                //boolean session=sp().isSignedIn();
                 boolean session= PreferencesHelper.isSignedIn(SplashActivity.this);
                 if(session)
                 {
@@ -44,6 +45,10 @@ public class SplashActivity extends AppCompatActivity {
                 }
                 startActivity(intent);
                 finish();
+
+                /*intent = new Intent(SplashActivity.this, LogInActivity.class);
+                startActivity(intent);
+                finish();*/
             }
         };
 

@@ -5,16 +5,20 @@ import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 
 
-public class PreferencesHelper {
+public class PreferencesHelper { //Singleton
 
     private static final String MYNOTES_PREFERENCES = "com.amoviles.sp";
     private static final String PREFERENCES_USERNAME = MYNOTES_PREFERENCES + ".username";
     private static final String PREFERENCES_PASSWORD = MYNOTES_PREFERENCES + ".password";
     private static final String PRODUCT_ID=MYNOTES_PREFERENCES+".productId";
 
-    private PreferencesHelper() {
-        //no instance
-    }
+    //private Context context;
+
+    /*private PreferencesHelper(@NonNull final Context context) {
+       this.context= context;
+    }*/
+
+    public PreferencesHelper() { }
 
     public static void signOut(@NonNull final Context context) {
         SharedPreferences.Editor editor = getEditor(context);
@@ -35,7 +39,6 @@ public class PreferencesHelper {
     {
         SharedPreferences sharedPreferences= getSharedPreferences(context);
         String username= sharedPreferences.getString(PREFERENCES_USERNAME,null);
-
         return username;
     }
 
@@ -43,6 +46,12 @@ public class PreferencesHelper {
         final SharedPreferences preferences = getSharedPreferences(context);
         return preferences.contains(PREFERENCES_USERNAME) &&
                 preferences.contains(PREFERENCES_PASSWORD);
+    }
+
+    public static void saveStringKey(@NonNull final Context context,String key, String value){
+        SharedPreferences.Editor editor= getEditor(context);
+        editor.putString(key, value);
+        editor.apply();
     }
 
     private static SharedPreferences.Editor getEditor(@NonNull final Context context) {
