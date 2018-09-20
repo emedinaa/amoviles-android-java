@@ -9,9 +9,10 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.emedinaa.myfirstapp.model.NoteEntity;
-import com.emedinaa.myfirstapp.storage.CRUDOperations;
-import com.emedinaa.myfirstapp.storage.MyDatabase;
+import com.emedinaa.myfirstapp.storage.NoteRepository;
 import com.emedinaa.myfirstapp.ui.adapters.NoteAdapter;
 
 import java.util.List;
@@ -26,8 +27,8 @@ public class NoteListActivity extends AppCompatActivity {
     private ListView lstNotes;
     private Button btnAddNote;
     private List<NoteEntity> lsNoteEntities;
-    private CRUDOperations crudOperations;
     private NoteAdapter noteAdapter;
+    private NoteRepository noteRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,27 +36,51 @@ public class NoteListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_note_list);
         init();
         //populate();
+        //populateRoom();
         //loadData();
+        //loadDataRoom();
     }
 
-    private void loadData() {
-        crudOperations= new CRUDOperations(new MyDatabase(this));
-        lsNoteEntities= crudOperations.getAllNotes();
+    private void loadDataRoom() {
+        noteRepository= ((NoteApplication)(getApplication())).getNoteRepository();
+
+        noteRepository.getAllNotes(new NoteRepository.PopulateCallback() {
+            @Override
+            public void onSuccess(List<NoteEntity> noteEntities) {
+                renderNotes(noteEntities);
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+                showErrorMessage(e.toString());
+            }
+        });
+    }
+    private void renderNotes(List<NoteEntity> noteEntities){
+        lsNoteEntities= noteEntities;
         noteAdapter= new NoteAdapter(this,lsNoteEntities);
         lstNotes.setAdapter(noteAdapter);
     }
 
-    private void populate() {
+    private void showErrorMessage(String error){
+        Toast.makeText(this,"Error : "+error,Toast.LENGTH_SHORT).show();
+    }
 
-        CRUDOperations crudOperations= new CRUDOperations(new MyDatabase(this));
-        crudOperations.addNote(new NoteEntity("Mi Nota","Esta es un nota ",null));
-        crudOperations.addNote(new NoteEntity("Segunda Nota","Esta es la segunds nota ",null));
-        crudOperations.addNote(new NoteEntity("Tercera Nota","Esta es la tercera nota ",null));
-        crudOperations.addNote(new NoteEntity("Cuarta Nota","Esta es la cuarta nota ",null));
-        crudOperations.addNote(new NoteEntity("Quinta Nota","Esta es la quinta nota ",null));
-        crudOperations.addNote(new NoteEntity("Sexta Nota","Esta es la sexta nota ",null));
+    /* Error
+    Caused by: java.lang.IllegalStateException: Cannot access database on the main thread since it may potentially lock the UI for a long period of time.
+     */
+    private void populateRoom() {
+        noteRepository= ((NoteApplication)(getApplication())).getNoteRepository();
 
-        Log.v(TAG, "populate " + crudOperations.getAllNotes());
+        //new NoteEntity("Mi Nota","Esta es un nota ",null)
+        noteRepository.addNotes(new NoteEntity(1,"Mi Nota","Esta es un nota ",null),
+        new NoteEntity(2,"Segunda Nota","Esta es la segunds nota ",null),
+        new NoteEntity(3,"Tercera Nota","Esta es la tercera nota ",null),
+        new NoteEntity(4,"Cuarta Nota","Esta es la cuarta nota ",null),
+        new NoteEntity(5,"Quinta Nota","Esta es la quinta nota ",null),
+        new NoteEntity(6,"Sexta Nota","Esta es la sexta nota ",null));
+
+        //Log.v(TAG, "populate " + crudOperations.getAllNotes());
     }
 
     private void init() {
@@ -63,7 +88,6 @@ public class NoteListActivity extends AppCompatActivity {
         tviUser= (TextView)findViewById(R.id.tviUser);
         lstNotes= (ListView)(findViewById(R.id.lstNotes));
         btnAddNote= (Button)(findViewById(R.id.btnAddNote));
-
 
         //events
         btnAddNote.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +104,7 @@ public class NoteListActivity extends AppCompatActivity {
                 gotoNote(ACTION_DETAIL, noteEntity);
             }
         });
+
 
     }
 
@@ -105,7 +130,8 @@ public class NoteListActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.v(TAG, "MainActivity onResumen - 2");
-        loadData();
+        //loadData();
+        loadDataRoom();
     }
 
     @Override

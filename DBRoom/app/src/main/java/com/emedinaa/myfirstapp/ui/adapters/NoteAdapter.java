@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.emedinaa.myfirstapp.R;
 import com.emedinaa.myfirstapp.model.NoteEntity;
 
