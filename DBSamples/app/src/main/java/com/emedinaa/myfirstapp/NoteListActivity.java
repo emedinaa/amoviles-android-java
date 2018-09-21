@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import com.emedinaa.myfirstapp.model.NoteEntity;
 import com.emedinaa.myfirstapp.storage.CRUDOperations;
 import com.emedinaa.myfirstapp.storage.MyDatabase;
@@ -55,6 +56,14 @@ public class NoteListActivity extends AppCompatActivity {
         crudOperations.addNote(new NoteEntity("Quinta Nota","Esta es la quinta nota ",null));
         crudOperations.addNote(new NoteEntity("Sexta Nota","Esta es la sexta nota ",null));
 
+
+        /*try {
+            crudOperations.add(new ContentValues(),"tb_notes");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
+        DbInjector.db().addNote(new NoteEntity("Mi Nota","Esta es un nota ",null));
+
         Log.v(TAG, "populate " + crudOperations.getAllNotes());
     }
 
@@ -98,8 +107,14 @@ public class NoteListActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
         }
+
+        //startActivityForResult(intent,100);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
     @Override
     protected void onResume() {

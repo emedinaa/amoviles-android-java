@@ -121,7 +121,8 @@ public class DetailsFragment extends Fragment {
         //base de datos
         int id = noteEntity.getId();
         NoteEntity editNoteEntity= new NoteEntity(id,editNoteName,editNoteDesc,null);
-        mListener.editNote(editNoteEntity);
+        mListener.getCrudOperations().updateNote(editNoteEntity);
+        //mListener.editNote(editNoteEntity);
     }
 
     private boolean validateForm(){

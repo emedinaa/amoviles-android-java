@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import android.support.annotation.NonNull;
 
 import com.emedinaa.myfirstapp.model.NoteEntity;
 
@@ -18,6 +19,12 @@ public class CRUDOperations {
 		super();
 		// TODO Auto-generated constructor stub
 		helper =(MyDatabase)_helper;
+	}
+
+	public  void add(ContentValues values, @NonNull String table) throws Exception{
+		SQLiteDatabase db = helper.getWritableDatabase(); //modo escritura
+		db.insert(table, null, values);
+		db.close();
 	}
 
 	public void addNote(NoteEntity noteEntity)
@@ -90,8 +97,13 @@ public class CRUDOperations {
 	}
 	
 	//--------------------------------------------
-	public int updateNote(NoteEntity noteEntity)
-	{
+	public int updateTable(NoteEntity noteEntity,ContentValues values,
+						   @NonNull  String table) throws Exception{
+		SQLiteDatabase db = helper.getWritableDatabase();
+		return 0;
+	}
+
+	public int updateNote(NoteEntity noteEntity) {
 		SQLiteDatabase db = helper.getWritableDatabase();
 		ContentValues values = new ContentValues();
 		values.put(MyDatabase.KEY_NAME, noteEntity.getName());
