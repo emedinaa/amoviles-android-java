@@ -53,3 +53,11 @@ emedinaa@gmail.com con asunto "Android con Java G30-Q - Tarea X"
 - Multimedia
 
 - Publicación Google Play
+
+## References
+
+- Swipe https://developer.android.com/training/swipe/add-swipe-interface
+
+- Floating Action Button https://developer.android.com/guide/topics/ui/floating-action-button
+
+- Material Icons https://material.io/tools/icons/?style=baseline

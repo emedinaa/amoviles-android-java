@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MVPSample</string>
+    <string name="hello_world">Hello World with Java!</string>
+    <string name="my_note">My Notes</string>
+</resources>
