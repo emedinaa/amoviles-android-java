@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">MyFirstApp</string>
+    <string name="app_name">AppCompSamples</string>
     <string name="hello_world">Hello World with Java!</string>
 </resources>
