@@ -1,9 +1,24 @@
-# amoviles-android-java
-Curso de Aplicaciones Android con Java - 48h - Academia Móviles
+## Lesson 11 - Tuesday, September 25, 2018
 
-## Conexión Remota
+- Review
 
-## Tools
+- Lesson
+
+- Samples
+
+- Homework
+
+- Resources
+
+## Review
+
+¿Qué temas vimos en la clase pasada ?
+
+
+## Lesson
+
+
+*Tools*
 
 Vamos a utilizar algunas herramientas que nos permitan realizar pruebas de los servicios que vamos a consumir desde nuestra app.
 
@@ -14,7 +29,7 @@ https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddom
 - Visores de Json
 JsonEditor , nos permite ver de una manera más ordenada la tramas que recibimos de los servicios, que normalmente son JSON. http://jsoneditoronline.org/
 
-## Configuración del proyecto
+*Configuración del proyecto*
 
 - Primer paso:
 
@@ -83,7 +98,7 @@ ext {
     okhttp3='3.4.1'
 }
 ```
-## Probando los servicios 
+*Probando los servicios* 
     
 Antes de realizar las llamadas a los servicios desde la app , es saludable revisar que los servicios estén operativos y corroborar cuales son las tramas de envío ( request) y de respuesta (response).
 Para esto, vamos a usar POSTMAN
@@ -240,7 +255,7 @@ Path : api/notes/{id}
 
 Url : https://obscure-earth-55790.herokuapp.com/api/notes/59f498c6502b052218b25479
 
-## Ejemplo BackendLess
+*Ejemplo BackendLess*
 
 - Backendless https://backendless.com
 
@@ -248,7 +263,7 @@ Url : https://obscure-earth-55790.herokuapp.com/api/notes/59f498c6502b052218b254
 
 - LogIn https://backendless.com/docs/rest/doc.html#users_login
 
-## Patrones y Arquitectura de aplicaciones móviles
+*Patrones y Arquitectura de aplicaciones móviles*
 
 - Explicaremos un poco de las diferentes opciones de patrones y arquitecturas para el desarrollo de aplicaciones móviles.
 
@@ -268,7 +283,13 @@ Url : https://obscure-earth-55790.herokuapp.com/api/notes/59f498c6502b052218b254
 
 - Presenter : Este elemento va tener la lógica , se comunica con el módelo. Recibe los cambios del modelo y actualiza la vista. Se comporta como controlador de las vistas.
 
-## References
+## Samples
+
+## Exercises
+
+## Homework
+
+## Resources 
 
 - Swipe https://developer.android.com/training/swipe/add-swipe-interface
 
