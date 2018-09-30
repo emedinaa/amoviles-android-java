@@ -4,7 +4,7 @@
 
 - JsonEditor http://jsoneditoronline.org/
 
-- Clase 4
+Otros
 
 - Firebase / Parse
 

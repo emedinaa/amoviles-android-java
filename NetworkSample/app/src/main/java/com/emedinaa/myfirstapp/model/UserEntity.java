@@ -17,6 +17,9 @@ public class UserEntity {
     }
      */
 
+    //@SerializedName("_id")
+    //private String id2;
+
     private String id;
     private String username;
     private String password;
