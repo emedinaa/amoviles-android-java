@@ -99,14 +99,16 @@ public class NoteActivity extends BaseActivity implements OnNoteListener, MyDial
 
     @Override
     public void editNote(NoteEntity noteEntity) {
-        crudOperations.updateNote(noteEntity);
+        //crudOperations.updateNote(noteEntity);
+        crudOperations.updateNote(this,noteEntity);
     }
 
     @Override
     public void onPositiveListener(Object object, int type) {
         Log.v("CONSOLE", "dialog positive");
         if(currentNote!=null) {
-            crudOperations.deleteNote(currentNote);
+            //crudOperations.deleteNote(currentNote);
+            crudOperations.deleteNote(this,currentNote);
             currentNote=null;
             finish();
         }

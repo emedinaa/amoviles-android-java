@@ -1,5 +1,6 @@
 package com.emedinaa.myfirstapp.storage;
 
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -195,6 +196,7 @@ public class CRUDOperations {
 
 				lst.add(contact);
 			}while(cursor.moveToNext());
+			cursor.close();
 		}
 		return lst;
 	}
@@ -212,7 +214,47 @@ public class CRUDOperations {
 		Uri uri= Uri.withAppendedPath(NoteContract.NoteEntry.CONTENT_URI,rowId);
 		Cursor cursor= context.getContentResolver().query(uri,projection,
 				selection,selectionArgs,sortOrden);
-		
-		return new NoteEntity();
+
+		NoteEntity noteEntity=null;
+		if (cursor != null && cursor.moveToNext()) {
+			int nid = Integer.parseInt(cursor.getString(0));
+			String name = cursor.getString(1);
+			String desc = cursor.getString(2);
+			String path = cursor.getString(3);
+
+			noteEntity= new NoteEntity(
+					nid, name, desc,path);
+		}
+		return noteEntity;
+	}
+
+	public int updateNote(@NonNull final Context context,NoteEntity noteEntity) {
+
+		String selection = NoteContract.NoteEntry.ID + " = ?";
+		String[] selectionArgs = { String.valueOf(noteEntity.getId()) };			// WHERE country = ? = Japan
+
+		ContentValues contentValues = new ContentValues();
+		contentValues.put(NoteDbHelper.KEY_NAME, noteEntity.getName());
+		contentValues.put(NoteDbHelper.KEY_DESC, noteEntity.getDescription());
+		contentValues.put(NoteDbHelper.KEY_PATH, noteEntity.getPath());
+
+		Uri uri= NoteContract.NoteEntry.CONTENT_URI;
+		int rowsUpdated= context.getContentResolver().update(uri,contentValues,selection,selectionArgs);
+		return rowsUpdated;
+	}
+
+	public int deleteNote(@NonNull final Context context,NoteEntity noteEntity)
+	{
+		String selection = NoteContract.NoteEntry.ID + " = ?";
+		String[] selectionArgs = { String.valueOf(noteEntity.getId()) };
+
+		int rowId= noteEntity.getId();
+		String rowName= noteEntity.getName();
+
+		//Uri uri = Uri.withAppendedPath(NoteContract.NoteEntry.CONTENT_URI, rowId);
+		//Uri uri = Uri.withAppendedPath(NoteContract.NoteEntry.CONTENT_URI, rowId);
+		Uri uri = ContentUris.withAppendedId(NoteContract.NoteEntry.CONTENT_URI,rowId);
+		int rowDeleted = context.getContentResolver().delete(uri, selection, selectionArgs);
+		return rowDeleted;
 	}
 }

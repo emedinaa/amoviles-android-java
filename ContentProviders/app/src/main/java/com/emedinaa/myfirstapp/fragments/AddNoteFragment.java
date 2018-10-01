@@ -155,18 +155,7 @@ public class AddNoteFragment extends Fragment {
         mListener.getCrudOperations().insert(getActivity(),noteEntity);
     }
 
-    /*private void bdCallback(){
-        onSuccess(){
-
-        }
-
-        onError(){
-
-        }
-    }*/
-
     private void closeActivity(){
-        //ui
         getActivity().finish();
     }
 }

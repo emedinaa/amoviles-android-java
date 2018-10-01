@@ -34,12 +34,13 @@ public class NoteProvider extends ContentProvider {
 
     //constants for the operation
     private static final int NOTES=1;
-    private static final int NOTES_NOTE_NAME=2;
-    private static final int NOTES_ID=3;
+    private static final int NOTES_ID=2;
+    private static final int NOTES_NOTE_NAME=3;
+
     static{
         uriMatcher.addURI(NoteContract.CONTENT_AUTHORITY,NoteContract.PATH_NOTES,NOTES);//1);
-        uriMatcher.addURI(NoteContract.CONTENT_AUTHORITY,NoteContract.PATH_NOTES+"/*",NOTES_NOTE_NAME);//2);
         uriMatcher.addURI(NoteContract.CONTENT_AUTHORITY,NoteContract.PATH_NOTES+"/#",NOTES_ID);//3);
+        uriMatcher.addURI(NoteContract.CONTENT_AUTHORITY,NoteContract.PATH_NOTES+"/*",NOTES_NOTE_NAME);//2);
     }
 
     @Override
@@ -52,7 +53,7 @@ public class NoteProvider extends ContentProvider {
     @Override
     public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
         SQLiteDatabase database= noteDbHelper.getReadableDatabase();
-        Cursor cursor=null;
+        Cursor cursor;
         switch (uriMatcher.match(uri)){
             case NOTES:
                 cursor= database.query(NoteContract.NoteEntry.TABLE_NAME,projection,
@@ -85,6 +86,28 @@ public class NoteProvider extends ContentProvider {
         }
     }
 
+    @Override
+    public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
+        switch (uriMatcher.match(uri)){
+            case NOTES_ID:		// To delete a row by ID
+                selection = NoteContract.NoteEntry.ID + " = ?";
+                selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
+                return deleteRecord(selection, selectionArgs, NoteContract.NoteEntry.TABLE_NAME);
+             default:
+                 throw new IllegalArgumentException(TAG + "Unknown URI: " + uri);
+        }
+    }
+
+    @Override
+    public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
+        switch (uriMatcher.match(uri)) {
+            case NOTES:// For Notes Table
+                return updateRecord(values, selection, selectionArgs, NoteContract.NoteEntry.TABLE_NAME);
+            default:
+                throw new IllegalArgumentException(TAG + "Unknown URI: " + uri);
+        }
+    }
+
     private Uri insertRecord(Uri uri,ContentValues values,String tableName){
         SQLiteDatabase database= noteDbHelper.getWritableDatabase();
         long rowId= database.insert(NoteContract.NoteEntry.TABLE_NAME,null,values);
@@ -95,13 +118,15 @@ public class NoteProvider extends ContentProvider {
         return ContentUris.withAppendedId(uri,rowId);
     }
 
-    @Override
-    public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
-        return 0;
+    private int updateRecord(ContentValues values, String selection, String[] selectionArgs, String tableName) {
+        SQLiteDatabase database = noteDbHelper.getWritableDatabase();
+        int rowsUpdated = database.update(tableName, values, selection, selectionArgs);
+        return rowsUpdated;
     }
 
-    @Override
-    public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
-        return 0;
+    private int deleteRecord(String selection, String[] selectionArgs, String tableName) {
+        SQLiteDatabase database = noteDbHelper.getWritableDatabase();
+        int rowsDeleted = database.delete(tableName, selection, selectionArgs);
+        return rowsDeleted;
     }
 }
