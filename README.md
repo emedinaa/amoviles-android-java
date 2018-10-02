@@ -1,55 +1,60 @@
-# amoviles-android-java
-Curso de Aplicaciones Android con Java - 48h - Academia Móviles
+##Lesson 12 - Tuesday, October 2, 2018 
 
-# Instructor :
+- Review
 
-Eduardo José Medina Alfaro 
+- Lesson
 
-e-mail : emedinaa@gmail.com
+- Samples
 
-Android Developer Senior at Belatrix & Mapsalud https://www.linkedin.com/in/emedinaa/
+- Homework
 
-# Tareas
+- Resources
 
-En cada clase hay un sección llamada "Homework" donde se indica la tarea a realizar. La tarea se envía vía email a 
-emedinaa@gmail.com con asunto "Android con Java G30-Q - Tarea X"
+## Review
 
-* No olviden borrar la carpeta *build* y  *app/build*
+¿Qué temas vimos en la clase pasada ?
 
-##
+## Lesson
 
-# Temario :
+## Samples
 
-- Java para mobile developers
+- ContentProviders
 
-- Fundamentos de Android
+- AppComponents
 
-- Entorno de desarrollo
+- Services
 
-- GUI básico (Interfaz de usuario)
+## Homework
 
-- GUI Avanzado (Interfaz de usuario)
+## Resources
 
-- Eventos
+- App components https://developer.android.com/guide/components/fundamentals?hl=es-419
 
-- Herramientas de Debugging
+- Activity Lifecycle https://developer.android.com/training/basics/activity-lifecycle/?hl=es-419
 
-- GUI usando Fragments
+- Activity https://developer.android.com/guide/components/activities?hl=es-419
 
-- Content Providers y broadcast receivers
+- Introduction to Activities https://developer.android.com/guide/components/activities/intro-activities
 
-- Base de Datos
+- Content providers https://developer.android.com/guide/topics/providers/content-providers?hl=en
 
-- REST , conexión remota
+- Content provider basic https://developer.android.com/guide/topics/providers/content-provider-basics?hl=en
 
-- Geolocalización
+- Broadcast overview https://developer.android.com/guide/components/broadcasts
 
-- Internacionalización
+- Broadcast Receivers https://google-developer-training.gitbooks.io/android-developer-fundamentals-course-concepts/content/en/Unit%203/73_c_broadcast_receivers.html
 
-- Sensores
+- Services overview https://developer.android.com/guide/components/services
 
-- Google maps
+- Create a background service (Intent service) https://developer.android.com/training/run-background-service/create-service
 
-- Multimedia
+- Jobscheduler https://medium.com/google-developers/scheduling-jobs-like-a-pro-with-jobscheduler-286ef8510129
 
-- Publicación Google Play
+- Background tasks https://developer.android.com/training/best-background
+
+- Background execution limits https://developer.android.com/about/versions/oreo/background
+
+- Migrating to Android 8.0 (sdk 26) https://developer.android.com/about/versions/oreo/android-8.0-migration?hl=es-419
+
+
+
