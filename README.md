@@ -58,5 +58,7 @@
 
 - Migrating to Android 8.0 (sdk 26) https://developer.android.com/about/versions/oreo/android-8.0-migration?hl=es-419
 
+- Broadcast receiver sample https://developer.android.com/training/monitoring-device-state/battery-monitoring?hl=es-419
+
 
 
