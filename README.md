@@ -24,6 +24,8 @@
 
 - Services
 
+- BroadcastReceivers
+
 ## Homework
 
 ## Resources
