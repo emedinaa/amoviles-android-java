@@ -16,6 +16,19 @@
 
 ## Lesson
 
+- Activities
+
+ <img src="https://developer.android.com/images/service_lifecycle.png?hl=es-419" height="480"/>
+ 
+- Services 
+
+ <img src="https://developer.android.com/images/service_lifecycle.png?hl=es-419" height="480"/>
+ 
+- Content providers
+
+- Broadcast receivers
+
+
 ## Samples
 
 - ContentProviders
