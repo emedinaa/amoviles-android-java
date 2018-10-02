@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BroadcastReceivers</string>
+    <string name="hello_world">Hello World with Java!</string>
+</resources>
