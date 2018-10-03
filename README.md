@@ -289,6 +289,8 @@ Url : https://obscure-earth-55790.herokuapp.com/api/notes/59f498c6502b052218b254
 
 ## Homework
 
+- Crear una cuenta nueva en backendless, contruir una app en esta plataforma con la base de datos y conectarla a la app de clase, usando para esto las nuevas keys creadas.
+
 ## Resources 
 
 - Swipe https://developer.android.com/training/swipe/add-swipe-interface
