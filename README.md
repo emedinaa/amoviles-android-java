@@ -62,6 +62,8 @@ Un receptor de mensajes se implementa como una subclase de BroadcastReceiver y c
 
 ## Homework
 
+- Crear un ejemplo con Broadcast Receiver usando algún otro evento de sistema y conectarlo a la ui usando interfaces(callback).
+
 ## Resources
 
 - App components https://developer.android.com/guide/components/fundamentals?hl=es-419
