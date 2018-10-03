@@ -28,4 +28,9 @@
         android:icon="@drawable/ic_action_done"
         app:showAsAction="never" />
     <!--android:showAsAction="ifNever" />-->
+
+    <item android:id="@+id/option"
+        android:title="Otra opción"
+        android:icon="@drawable/ic_action_done"
+        app:showAsAction="never" />
 </menu>
