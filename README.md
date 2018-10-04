@@ -48,4 +48,7 @@
 
 - Background Locations updates https://codelabs.developers.google.com/codelabs/background-location-updates-android-o/index.html?index=..%2F..%2Findex#0
 
+- MyMaps http://google.com/mymaps
+
+
 
