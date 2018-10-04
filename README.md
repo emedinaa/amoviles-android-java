@@ -1,4 +1,4 @@
-##Lesson 13 - Thursday, October 4, 2018 
+## Lesson 13 - Thursday, October 4, 2018 
 
 - Review
 
