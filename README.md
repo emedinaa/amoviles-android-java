@@ -1,55 +1,51 @@
-# amoviles-android-java
-Curso de Aplicaciones Android con Java - 48h - Academia Móviles
+## Lesson 13 - Thursday, October 4, 2018 
 
-# Instructor :
+- Review
 
-Eduardo José Medina Alfaro 
+- Lesson
 
-e-mail : emedinaa@gmail.com
+- Samples
 
-Android Developer Senior at Belatrix & Mapsalud https://www.linkedin.com/in/emedinaa/
+- Homework
 
-# Tareas
+- Resources
 
-En cada clase hay un sección llamada "Homework" donde se indica la tarea a realizar. La tarea se envía vía email a 
-emedinaa@gmail.com con asunto "Android con Java G30-Q - Tarea X"
+## Review
 
-* No olviden borrar la carpeta *build* y  *app/build*
+¿Qué temas vimos en la clase pasada ?
 
-##
+## Lesson
 
-# Temario :
+## Samples
 
-- Java para mobile developers
+- ContentProviders
 
-- Fundamentos de Android
+- AppFundamentals
 
-- Entorno de desarrollo
+- Services
 
-- GUI básico (Interfaz de usuario)
+- BroadcastReceivers
 
-- GUI Avanzado (Interfaz de usuario)
+## Homework
 
-- Eventos
+## References
 
-- Herramientas de Debugging
+- Create and monitor geofences https://developer.android.com/training/location/geofencing
 
-- GUI usando Fragments
+- Maps SDK for Android https://developers.google.com/maps/documentation/android-sdk/intro
 
-- Content Providers y broadcast receivers
+- Maps SDK for Android samples https://developers.google.com/maps/documentation/android-sdk/code-samples
 
-- Base de Datos
+- User location https://developer.android.com/training/location/
 
-- REST , conexión remota
+- Location and Maps https://developer.android.com/guide/topics/location/
 
-- Geolocalización
+- Location strategies https://developer.android.com/guide/topics/location/strategies
 
-- Internacionalización
+- Places SDK for Android https://developers.google.com/places/android-sdk/intro
 
-- Sensores
+- Google Codelabs (Android) https://codelabs.developers.google.com/?cat=Android
 
-- Google maps
+- Background Locations updates https://codelabs.developers.google.com/codelabs/background-location-updates-android-o/index.html?index=..%2F..%2Findex#0
 
-- Multimedia
 
-- Publicación Google Play
