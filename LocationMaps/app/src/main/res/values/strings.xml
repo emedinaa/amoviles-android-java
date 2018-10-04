@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyFirstApp</string>
+    <string name="hello_world">Hello World with Java!</string>
+    <string name="google_maps_key">AIzaSyBLPVN3pLr-PIeJNDuXo8WDSFeflmREB_M</string>
+</resources>
