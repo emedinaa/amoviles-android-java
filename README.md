@@ -1,59 +1,32 @@
-# amoviles-android-java
-Curso de Aplicaciones Android con Java - 48h - Academia Móviles
+##Lesson 13 - Thursday, October 4, 2018 
 
-# Instructor :
+- Review
 
-Eduardo José Medina Alfaro 
+- Lesson
 
-e-mail : emedinaa@gmail.com
+- Samples
 
-Android Developer Senior at Belatrix & Mapsalud https://www.linkedin.com/in/emedinaa/
+- Homework
 
-# Tareas
+- Resources
 
-En cada clase hay un sección llamada "Homework" donde se indica la tarea a realizar. La tarea se envía vía email a 
-emedinaa@gmail.com con asunto "Android con Java G30-Q - Tarea X"
+## Review
 
-* No olviden borrar la carpeta *build* y  *app/build*
+¿Qué temas vimos en la clase pasada ?
 
-##
+## Lesson
 
-# Temario :
+## Samples
 
-- Java para mobile developers
+- ContentProviders
 
-- Fundamentos de Android
+- AppFundamentals
 
-- Entorno de desarrollo
+- Services
 
-- GUI básico (Interfaz de usuario)
+- BroadcastReceivers
 
-- GUI Avanzado (Interfaz de usuario)
-
-- Eventos
-
-- Herramientas de Debugging
-
-- GUI usando Fragments
-
-- Content Providers y broadcast receivers
-
-- Base de Datos
-
-- REST , conexión remota
-
-- Geolocalización
-
-- Internacionalización
-
-- Sensores
-
-- Google maps
-
-- Multimedia
-
-- Publicación Google Play
-
+## Homework
 
 ## References
 
