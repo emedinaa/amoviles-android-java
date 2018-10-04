@@ -43,6 +43,9 @@ dependencies {
 
     implementation "com.google.android.gms:play-services-maps:$rootProject.psMapsVersion"
 
+    //compile 'com.google.android.gms:play-services-location:11.0.0'
+    implementation "com.google.android.gms:play-services-location:$rootProject.psMapsVersion"
+
     //testImplementation 'junit:junit:4.12'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
