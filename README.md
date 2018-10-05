@@ -18,6 +18,14 @@
 
 - Google Maps
 
+Maps sdk for Android https://developers.google.com/maps/documentation/android-sdk/intro
+
+1. Crear proyecto en la google API console.
+2. Activar Librería Google Maps for Android.
+3. Crear un nuevo proyecto y agregar dependencias de google maps y location api.
+4. Crear key para aplicación Android.
+5. Agregar mapa a tu proyecto.
+
 - Location API
 
 - Services
