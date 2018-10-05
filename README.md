@@ -16,15 +16,18 @@
 
 ## Lesson
 
-## Samples
+- Google Maps
 
-- ContentProviders
-
-- AppFundamentals
+- Location API
 
 - Services
 
-- BroadcastReceivers
+
+## Samples
+
+- LocationMaps
+
+- Services
 
 ## Homework
 
