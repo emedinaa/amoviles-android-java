@@ -20,7 +20,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.emedinaa.myfirstapp.BuildConfig;
-import com.emedinaa.myfirstapp.MainLocationActivity;
 import com.emedinaa.myfirstapp.R;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.ResolvableApiException;
@@ -57,7 +56,7 @@ public  abstract class BaseLocationActivity extends AppCompatActivity {
     /**
      * The desired interval for location updates. Inexact. Updates may be more or less frequent.
      */
-    private static final long UPDATE_INTERVAL_IN_MILLISECONDS = 10000;
+    private static final long UPDATE_INTERVAL_IN_MILLISECONDS = 4000;//10000;
 
     /**
      * The fastest rate for active location updates. Exact. Updates will never be more frequent

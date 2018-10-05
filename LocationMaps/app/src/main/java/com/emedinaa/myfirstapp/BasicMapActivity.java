@@ -28,5 +28,8 @@ public class BasicMapActivity extends AppCompatActivity implements OnMapReadyCal
     @Override
     public void onMapReady(GoogleMap map) {
         map.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+
+        map.getUiSettings().setZoomControlsEnabled(true);
+        map.getUiSettings().setMyLocationButtonEnabled(true);
     }
 }
