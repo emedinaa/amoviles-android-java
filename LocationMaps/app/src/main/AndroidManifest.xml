@@ -64,6 +64,16 @@
             -->
         </activity>
         <activity android:name=".MainLocationActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".MainLocationMapActivity">
             <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -71,7 +81,7 @@
             </intent-filter>-->
         </activity>
 
-        <activity android:name=".MainLocationMapActivity">
+        <activity android:name=".MainGeofenceMapActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -88,6 +98,7 @@
             android:name=".geofencing.GeofenceTransitionsJobIntentService"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+
     </application>
 
 </manifest>
