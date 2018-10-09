@@ -72,7 +72,7 @@ Number formats :
 
 Tipos de sensores
 
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/android_sensor_types.png" height="620" />
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/android_sensor_types.png" height="720" />
 
 Sensores por plataforma
 
@@ -84,9 +84,7 @@ Sensores ambientales
 
 Virtual sensors
 
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_1.png" height="240" />
-
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_2.png" height="240" />
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_1.png" height="360" /> <img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_2.png" height="360" />
 
 ## Samples
 
