@@ -70,10 +70,28 @@ Number formats :
 
 **Sensores**
 
+Tipos de sensores
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/android_sensor_types.png" height="720" />
+
+Sensores por plataforma
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/android_sensor_by_platform.png" height="520" />
+
+Sensores ambientales
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/android_environment_sensors%20.png" height="180" />
+
+Virtual sensors
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_1.png" height="480" /> <img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_2.png" height="480" />
+
 ## Samples
 
 - Localization
 - Sensors
+
+<img src="https://github.com/emedinaa/amoviles-android-java/blob/Lesson14-SensorsLocalization/screenshot_es.png" height="480" /> <img src="https://github.com/emedinaa/amoviles-android-java/blob/Lesson14-SensorsLocalization/screenshot_en.png" height="480" />
 
 ## Exercises
 
@@ -91,6 +109,14 @@ Number formats :
 - Date Formats https://docs.oracle.com/cd/E19455-01/806-0169/overview-7/index.html
 
 - Number Formats https://docs.oracle.com/cd/E19455-01/806-0169/overview-9/index.html
+
+- Touch & input https://developer.android.com/guide/input/
+
+- Sensors https://developer.android.com/guide/topics/sensors/sensors_overview
+
+- Android Sensors https://developer.android.com/guide/topics/sensors/
+
+- Sensor types https://source.android.com/devices/sensors/sensor-types
 
 
 
