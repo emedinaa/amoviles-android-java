@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyFirstApp</string>
+    <string name="hello_world">Hola Mundo con Java!</string>
+    <string name="kotlin_title">Desarrolla aplicaciones android con Kotlin</string>
+    <string name="kotlin_item1">Moderno y expresivo</string>
+    <string name="kotlin_item2">Código más seguro</string>
+    <string name="kotlin_item3">Interoperable</string>
+    <string name="kotlin_item1_desc">Las características del lenguaje moderno de Kotlin le permiten concentrarse en expresar sus ideas y escribir menos código repetitivo. Menos código escrito también significa menos código para probar y mantener.</string>
+    <string name="kotlin_item2_desc">Mejora la calidad de tu aplicación con Kotlin. Los tipos @Nullable y @NonNull se incorporan al sistema de tipos de Kotlin para ayudarlo a evitar las NullPointerExceptions. Kotlin también tiene muchas otras características de lenguaje para ayudarlo a evitar errores comunes de programación.</string>
+    <string name="kotlin_item3_desc">Llame a código basado en Java desde Kotlin, o llame a Kotlin desde código basado en Java. Kotlin es 100% interoperable con el lenguaje de programación Java, por lo que puede tener en su proyecto la cantidad de Kotlin que desee.</string>
+    <string name="kotlin_desc">Escribe mejores aplicaciones de Android más rápido con Kotlin. Kotlin es un lenguaje de programación moderno y estático que aumentará su productividad y aumentará la felicidad de sus desarrolladores.</string>
+</resources>

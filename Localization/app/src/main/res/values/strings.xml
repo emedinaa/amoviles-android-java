@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">MyFirstApp</string>
     <string name="hello_world">Hello World with Java!</string>
+    <string name="kotlin_title">Develop Android apps with\nKotlin</string>
+    <string name="kotlin_desc">Write better Android apps faster with Kotlin. Kotlin is a modern statically typed programming language that will boost your productivity and increase your developer happiness.</string>
+    <string name="kotlin_item1">Modern and expressive</string>
+    <string name="kotlin_item1_desc">Kotlin\'s modern language features allow you to focus on expressing your ideas and write less boilerplate code. Less code written also means less code to test and maintain.</string>
+    <string name="kotlin_item2">Safer code</string>
+    <string name="kotlin_item2_desc">Improve your app quality with Kotlin. @Nullable and @NonNull types are baked into Kotlin\'s type system to help you avoid NullPointerExceptions. Kotlin also has many other language features to help you avoid common programming mistakes.</string>
+    <string name="kotlin_item3">Interoperable</string>
+    <string name="kotlin_item3_desc">Call Java-based code from Kotlin, or call Kotlin from Java-based code. Kotlin is 100% interoperable with the Java programming language, so you can have as little or as much of Kotlin in your project as you want. </string>
 </resources>

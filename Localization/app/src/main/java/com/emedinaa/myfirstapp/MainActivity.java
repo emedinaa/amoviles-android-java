@@ -3,43 +3,23 @@ package com.emedinaa.myfirstapp;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     /**
-     * Para asignar esta actividad como la primera en ejecutarse
-     debes realizarlo en el archivo AndroidManifest.xml adicionando la etiqueta
-     <intent-filter/>
-     Por ejemplo
-     <activity android:name=".MainActivity">
-     <intent-filter>
-     <action android:name="android.intent.action.MAIN" />
-     <category android:name="android.intent.category.LAUNCHER" />
-     </intent-filter>
-     </activity>
-     Solo puedes tener una actividad como 'LAUNCHER'
+     *
+     * https://developer.android.com/static/images/kotlin/hero.svg
+     * https://developer.android.com/static/images/kotlin/features/modern-expressive.svg
+     * https://developer.android.com/static/images/kotlin/features/safer-code.svg
+     * https://developer.android.com/static/images/kotlin/features/interoperable.gif
      */
 
-    private final String USER_MESSAGE="This is my First Android App";
-    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        textView= findViewById(R.id.textView);
-
-        //events
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showMessage(USER_MESSAGE);
-            }
-        });
     }
 
     private void showMessage(String message){
