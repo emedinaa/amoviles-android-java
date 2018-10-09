@@ -84,7 +84,7 @@ Sensores ambientales
 
 Virtual sensors
 
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_1.png" height="360" /> <img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_2.png" height="360" />
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_1.png" height="480" /> <img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_2.png" height="480" />
 
 ## Samples
 
@@ -92,6 +92,7 @@ Virtual sensors
 - Sensors
 
 <img src="https://github.com/emedinaa/amoviles-android-java/blob/Lesson14-SensorsLocalization/screenshot_es.png" height="480" /> <img src="https://github.com/emedinaa/amoviles-android-java/blob/Lesson14-SensorsLocalization/screenshot_en.png" height="480" />
+
 ## Exercises
 
 ## Homework
