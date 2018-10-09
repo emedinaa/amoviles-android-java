@@ -29,7 +29,7 @@ Android se ejecuta en muchos dispositivos en muchas regiones. Para llegar a la m
 
 Estructura de un proyecto Android :
 
-<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/localization/android_project_structure.png" height="240" />
+<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/localization/android_project_structure.png" height="360" />
 
 Directorio *RES* :
 
