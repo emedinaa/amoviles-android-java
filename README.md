@@ -72,6 +72,9 @@ Number formats :
 
 ## Samples
 
+- Localization
+- Sensors
+
 ## Exercises
 
 ## Homework
