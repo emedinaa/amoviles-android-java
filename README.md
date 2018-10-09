@@ -58,11 +58,11 @@ String locale = primaryLocale.getDisplayName();
 
 Date formats :
 
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_date_formats.png" height="480" />
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_date_formats.png" height="520" />
 
 Number formats :
 
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_number_formats.png" height="480" />
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_number_formats.png" height="520" />
 
 *Translations Editor*
 
