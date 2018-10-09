@@ -54,6 +54,16 @@ Obtener localización del device :
 Locale primaryLocale = context.getResources().getConfiguration().getLocales().get(0);
 String locale = primaryLocale.getDisplayName();
 ```
+*Otras consideraciones*
+
+Date formats :
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_date_formats.png" height="520" />
+
+Number formats :
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_number_formats.png" height="520" />
+
 *Translations Editor*
 
 <img src="https://developer.android.com/studio/images/write/translations-editor-basic_2x.png"/>
@@ -61,6 +71,9 @@ String locale = primaryLocale.getDisplayName();
 **Sensores**
 
 ## Samples
+
+- Localization
+- Sensors
 
 ## Exercises
 
@@ -74,6 +87,10 @@ String locale = primaryLocale.getDisplayName();
 - Localization [https://developer.android.com/guide/topics/resources/localization](https://developer.android.com/guide/topics/resources/localization)
 
 - Translations Editor https://developer.android.com/studio/write/translations-editor
+
+- Date Formats https://docs.oracle.com/cd/E19455-01/806-0169/overview-7/index.html
+
+- Number Formats https://docs.oracle.com/cd/E19455-01/806-0169/overview-9/index.html
 
 
 
