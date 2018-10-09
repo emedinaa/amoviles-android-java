@@ -54,15 +54,15 @@ Obtener localización del device :
 Locale primaryLocale = context.getResources().getConfiguration().getLocales().get(0);
 String locale = primaryLocale.getDisplayName();
 ```
-*Otras consideraciones *
+*Otras consideraciones*
 
 Date formats :
 
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_date_formats.png" height="360" />
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_date_formats.png" height="480" />
 
 Number formats :
 
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_number_formats.png" height="360" />
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_number_formats.png" height="480" />
 
 *Translations Editor*
 
