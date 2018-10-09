@@ -1,55 +1,78 @@
-# amoviles-android-java
-Curso de Aplicaciones Android con Java - 48h - Academia Móviles
+## Lesson 14 - Tuesday, October 8, 2018
 
-# Instructor :
+- Review
 
-Eduardo José Medina Alfaro 
+- Lesson
 
-e-mail : emedinaa@gmail.com
+- Samples
 
-Android Developer Senior at Belatrix & Mapsalud https://www.linkedin.com/in/emedinaa/
+- Homework
 
-# Tareas
+- Resources
 
-En cada clase hay un sección llamada "Homework" donde se indica la tarea a realizar. La tarea se envía vía email a 
-emedinaa@gmail.com con asunto "Android con Java G30-Q - Tarea X"
+## Review
 
-* No olviden borrar la carpeta *build* y  *app/build*
+¿Qué temas vimos en la clase pasada ?
 
-##
+## Lesson
 
-# Temario :
+Los temas que veremos en la clase son :
 
-- Java para mobile developers
+- [x] Localización de una App : Manejo de idiomas y recursos acorde a la región donde se use la App.
+- [x] Sensores 
 
-- Fundamentos de Android
+**Localización en tu app**
 
-- Entorno de desarrollo
+Android se ejecuta en muchos dispositivos en muchas regiones. Para llegar a la mayoría de los usuarios, su aplicación debe manejar texto, archivos de audio, números, moneda y gráficos de manera adecuada a los lugares donde se usa su aplicación.
 
-- GUI básico (Interfaz de usuario)
+*Recursos Android (res)*
 
-- GUI Avanzado (Interfaz de usuario)
+Estructura de un proyecto Android :
+<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/localization/android_project_structure.png" height="240" />
 
-- Eventos
+Directorio *RES* :
+<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/localization/android_res.png" height="240" />
 
-- Herramientas de Debugging
+Strings values :
 
-- GUI usando Fragments
+```xml
+res/values/strings.xml
+```
+String values por idioma :
 
-- Content Providers y broadcast receivers
+<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/localization/android_res_language.png" height="240" />
 
-- Base de Datos
 
-- REST , conexión remota
+Recursos de imágenes(drawables) por idioma :
 
-- Geolocalización
+<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/localization/android_res_drawable.png" height="240" />
 
-- Internacionalización
+Obtener localización del device :
+```java
+Locale primaryLocale = context.getResources().getConfiguration().getLocales().get(0);
+String locale = primaryLocale.getDisplayName();
+```
+*Translations Editor*
 
-- Sensores
+<img src="https://developer.android.com/studio/images/write/translations-editor-basic_2x.png"/>
 
-- Google maps
+**Sensores**
 
-- Multimedia
+## Samples
 
-- Publicación Google Play
+## Exercises
+
+## Homework
+- xxxx
+
+## Resources 
+
+- Recurso de una aplicación https://developer.android.com/guide/topics/resources/providing-resources
+
+- Localization [https://developer.android.com/guide/topics/resources/localization](https://developer.android.com/guide/topics/resources/localization)
+
+- Translations Editor https://developer.android.com/studio/write/translations-editor
+
+
+
+
