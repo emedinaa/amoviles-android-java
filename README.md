@@ -110,6 +110,8 @@ Virtual sensors
 
 - Number Formats https://docs.oracle.com/cd/E19455-01/806-0169/overview-9/index.html
 
+- Touch & input https://developer.android.com/guide/input/
+
 
 
 
