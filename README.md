@@ -112,6 +112,12 @@ Virtual sensors
 
 - Touch & input https://developer.android.com/guide/input/
 
+- Sensors https://developer.android.com/guide/topics/sensors/sensors_overview
+
+- Android Sensors https://developer.android.com/guide/topics/sensors/
+
+- Sensor types https://source.android.com/devices/sensors/sensor-types
+
 
 
 
