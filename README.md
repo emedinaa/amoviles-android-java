@@ -28,8 +28,7 @@ Maps sdk for Android https://developers.google.com/maps/documentation/android-sd
 
 Integrar Maps a un proyecto Android https://cloud.google.com/maps-platform/maps/
 
-``java
-
+```java
 public class MapPane extends Activity implements OnMapReadyCallback {
 
     @Override
@@ -47,12 +46,11 @@ public class MapPane extends Activity implements OnMapReadyCallback {
     }
 }
 
-
-``
+```
 
 Agregar un Marker
 
-``java
+```java
 public class MapPane extends Activity implements OnMapReadyCallback {
 
     @Override
@@ -78,10 +76,11 @@ public class MapPane extends Activity implements OnMapReadyCallback {
                 .position(sydney));
     }
 }
-``
+```
+
 Mover la cámara o área del mapa a un punto(lat,lng) en espécifico :
 
-``java
+```java
  @Override
     public void onMapReady(GoogleMap map) {
         LatLng sydney = new LatLng(-33.867, 151.206);
@@ -94,11 +93,11 @@ Mover la cámara o área del mapa a un punto(lat,lng) en espécifico :
                 .snippet("The most populous city in Australia.")
                 .position(sydney));
     }
-``
+```
 
 Custom markers
 
-``java
+```java
    @Override
     public void onMapReady(GoogleMap map) {
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(
@@ -112,11 +111,11 @@ Custom markers
                 .position(new LatLng(41.889, -87.622)));
     }
 
-``
+```
 
 Animar Cámara
 
-``java
+```java
   @Override
     public void onMapReady(GoogleMap map) {
         LatLng mapCenter = new LatLng(41.889, -87.622);
@@ -142,11 +141,11 @@ Animar Cámara
                 2000, null);
     }
 
-``
+```
 
 Polylines
 
-``java
+```java
 @Override
     public void onMapReady(GoogleMap map) {
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(
@@ -161,7 +160,7 @@ Polylines
         );
     }
 
-``
+```
 
 - Location API
 
