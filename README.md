@@ -164,6 +164,119 @@ Polylines
 
 - Location API
 
+User Location https://developer.android.com/training/location/
+
+Obtener la última ubicación conocida (Last known location)
+
+Se requiere el siguiente permiso :
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.android.gms.location.sample.basiclocationsample" >
+
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+</manifest>
+```
+Inicializar el cliente 'FusedLocationProviderClient' :
+```java
+private FusedLocationProviderClient mFusedLocationClient;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    // ...
+
+    mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+}
+```
+
+Para obtener la última ubicación conocida del usuario invocamos el método "getLastLocation()"
+
+```java
+mFusedLocationClient.getLastLocation()
+        .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                // Got last known location. In some rare situations this can be null.
+                if (location != null) {
+                    // Logic to handle location object
+                }
+            }
+        });
+```
+
+Solicitar actualizaciones de ubicación del usuario
+
+Se requiere el siguiente permiso
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.android.gms.location.sample.locationupdates" >
+
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+</manifest>
+```
+Iniciar solicitud
+
+```java
+@Override
+protected void onResume() {
+    super.onResume();
+    if (mRequestingLocationUpdates) {
+        startLocationUpdates();
+    }
+}
+
+private void startLocationUpdates() {
+    mFusedLocationClient.requestLocationUpdates(mLocationRequest,
+            mLocationCallback,
+            null /* Looper */);
+}
+```
+Recibir ubicaciones
+
+```java
+private LocationCallback mLocationCallback;
+
+// ...
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    // ...
+
+    mLocationCallback = new LocationCallback() {
+        @Override
+        public void onLocationResult(LocationResult locationResult) {
+            if (locationResult == null) {
+                return;
+            }
+            for (Location location : locationResult.getLocations()) {
+                // Update UI with location data
+                // ...
+            }
+        };
+    };
+}
+```
+
+Detener actualizaciones
+
+```java
+@Override
+protected void onPause() {
+    super.onPause();
+    stopLocationUpdates();
+}
+
+private void stopLocationUpdates() {
+    mFusedLocationClient.removeLocationUpdates(mLocationCallback);
+}
+```
+
+Detectar cuando un usuario inicia o finaliza un recorrido https://developer.android.com/guide/topics/location/transitions
+
+Crear y monitorear Geofences , esto te permite saber si un usuario en movimiento ingresa o sale de un área (circular)
+
+https://developer.android.com/training/location/geofencing
+
 - Services
 
 
