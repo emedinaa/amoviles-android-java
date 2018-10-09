@@ -91,7 +91,7 @@ Virtual sensors
 - Localization
 - Sensors
 
-<img src="https://github.com/emedinaa/amoviles-android-java/blob/Lesson14-SensorsLocalization/screenshot_es.png" height="480" /> <img src="https://github.com/emedinaa/amoviles-android-java/blob/Lesson14-SensorsLocalization/screenshot_en.png" height="480" />
+<img src="https://github.com/emedinaa/amoviles-android-java/blob/Lesson14-SensorsLocalization/images/screenshot_es.png" height="480" /> <img src="https://github.com/emedinaa/amoviles-android-java/blob/Lesson14-SensorsLocalization/images/screenshot_en.png" height="480" />
 
 ## Exercises
 
