@@ -1,4 +1,4 @@
-## Lesson 15 - Thursday, October 11, 2018
+## Lesson 16 - Thursday, October 11, 2018
 
 - Review
 
@@ -16,23 +16,7 @@
 
 ## Lesson
 
-- [x] Image
-- [x] Audio
-- [x] Video
-- [x] ExploPlayer
-
-Image support
-
-<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/media/android_image_formats.png" height="360" />
-
-Audio formats and codecs
-
-<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/media/android_audio_formats.png" height="640" />
-
-Video formats and codecs
-
-<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/media/android_video_formats.png" height="360" />
-
+- [x] xxxx
 
 Java code
 
@@ -84,22 +68,15 @@ Extras
 
 ## Resources 
 
-- Exoplayer https://developer.android.com/guide/topics/media/exoplayer
+- Google Play console https://developer.android.com/distribute/console/
 
-- Github exoplayer https://github.com/google/ExoPlayer
+- Google Play Developer API https://developer.android.com/google/play/developer-api?hl=es-419
 
-- Exployer guide https://google.github.io/ExoPlayer/
+- Android Proguard https://developer.android.com/studio/build/shrink-code?hl=es-419
 
-- Exoplayer codelab https://codelabs.developers.google.com/codelabs/exoplayer-intro/#0
+- Practical ProGuard rules samples https://medium.com/androiddevelopers/practical-proguard-rules-examples-5640a3907dc9
 
-- Audio & Video https://developer.android.com/guide/topics/media/
+- ProGuard https://www.guardsquare.com/en/products/proguard
 
-- Supported media formats https://developer.android.com/guide/topics/media/media-formats
-
-- MediaPlayer https://developer.android.com/reference/android/media/MediaPlayer
-
-- Glide https://github.com/bumptech/glide
-
-- Picasso http://square.github.io/picasso/
 
 
