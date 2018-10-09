@@ -16,6 +16,11 @@
 
 ## Lesson
 
+- [x] Image
+- [x] Audio
+- [x] Video
+- [x] ExploPlayer
+
 Image support
 
 <img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/media/android_image_formats.png" height="360" />
@@ -70,8 +75,6 @@ Extras
 - [x] This is a complete item
 - [ ] This is an incomplete item
 
-
-
 ## Samples
 
 ## Exercises
@@ -92,4 +95,7 @@ Extras
 - Audio & Video https://developer.android.com/guide/topics/media/
 
 - Supported media formats https://developer.android.com/guide/topics/media/media-formats
+
+- MediaPlayer https://developer.android.com/reference/android/media/MediaPlayer
+
 
