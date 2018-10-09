@@ -19,7 +19,8 @@
 Los temas que veremos en la clase son :
 
 - [x] Localización de una App : Manejo de idiomas y recursos acorde a la región donde se use la App.
-- [x] Sensores 
+- [x] Sensores
+- [x] Gestures & Touch
 
 **Localización en tu app**
 
@@ -85,6 +86,182 @@ Sensores ambientales
 Virtual sensors
 
 <img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_1.png" height="480" /> <img src="https://github.com/learning-android-pe/training-resources/blob/master/sensors/emulator_virtual_sensor_2.png" height="480" />
+
+**Gestures & Touch**
+
+Capturar eventos de tacto en una activity o un view
+
+```java
+public class MainActivity extends Activity {
+...
+// This example shows an Activity, but you would use the same approach if
+// you were subclassing a View.
+@Override
+public boolean onTouchEvent(MotionEvent event){
+
+    int action = MotionEventCompat.getActionMasked(event);
+
+    switch(action) {
+        case (MotionEvent.ACTION_DOWN) :
+            Log.d(DEBUG_TAG,"Action was DOWN");
+            return true;
+        case (MotionEvent.ACTION_MOVE) :
+            Log.d(DEBUG_TAG,"Action was MOVE");
+            return true;
+        case (MotionEvent.ACTION_UP) :
+            Log.d(DEBUG_TAG,"Action was UP");
+            return true;
+        case (MotionEvent.ACTION_CANCEL) :
+            Log.d(DEBUG_TAG,"Action was CANCEL");
+            return true;
+        case (MotionEvent.ACTION_OUTSIDE) :
+            Log.d(DEBUG_TAG,"Movement occurred outside bounds " +
+                    "of current screen element");
+            return true;
+        default :
+            return super.onTouchEvent(event);
+    }
+}
+```
+
+Capturar eventos de tacto a un View
+
+```java
+View myView = findViewById(R.id.my_view);
+myView.setOnTouchListener(new OnTouchListener() {
+    public boolean onTouch(View v, MotionEvent event) {
+        // ... Respond to touch events
+        return true;
+    }
+});
+```
+
+Detectar todos los gestos soportados
+
+```java
+public class MainActivity extends Activity implements
+        GestureDetector.OnGestureListener,
+        GestureDetector.OnDoubleTapListener{
+
+    private static final String DEBUG_TAG = "Gestures";
+    private GestureDetectorCompat mDetector;
+
+    // Called when the activity is first created.
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        // Instantiate the gesture detector with the
+        // application context and an implementation of
+        // GestureDetector.OnGestureListener
+        mDetector = new GestureDetectorCompat(this,this);
+        // Set the gesture detector as the double tap
+        // listener.
+        mDetector.setOnDoubleTapListener(this);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+        if (this.mDetector.onTouchEvent(event)) {
+            return true;
+        }
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    public boolean onDown(MotionEvent event) {
+        Log.d(DEBUG_TAG,"onDown: " + event.toString());
+        return true;
+    }
+
+    @Override
+    public boolean onFling(MotionEvent event1, MotionEvent event2,
+            float velocityX, float velocityY) {
+        Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
+        return true;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent event) {
+        Log.d(DEBUG_TAG, "onLongPress: " + event.toString());
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent event1, MotionEvent event2, float distanceX,
+            float distanceY) {
+        Log.d(DEBUG_TAG, "onScroll: " + event1.toString() + event2.toString());
+        return true;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent event) {
+        Log.d(DEBUG_TAG, "onShowPress: " + event.toString());
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent event) {
+        Log.d(DEBUG_TAG, "onSingleTapUp: " + event.toString());
+        return true;
+    }
+
+    @Override
+    public boolean onDoubleTap(MotionEvent event) {
+        Log.d(DEBUG_TAG, "onDoubleTap: " + event.toString());
+        return true;
+    }
+
+    @Override
+    public boolean onDoubleTapEvent(MotionEvent event) {
+        Log.d(DEBUG_TAG, "onDoubleTapEvent: " + event.toString());
+        return true;
+    }
+
+    @Override
+    public boolean onSingleTapConfirmed(MotionEvent event) {
+        Log.d(DEBUG_TAG, "onSingleTapConfirmed: " + event.toString());
+        return true;
+    }
+}
+```
+
+Crea tu propio listener para capturar gestos
+
+```java
+public class MainActivity extends Activity {
+
+    private GestureDetectorCompat mDetector;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mDetector = new GestureDetectorCompat(this, new MyGestureListener());
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+        this.mDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+        private static final String DEBUG_TAG = "Gestures";
+
+        @Override
+        public boolean onDown(MotionEvent event) {
+            Log.d(DEBUG_TAG,"onDown: " + event.toString());
+            return true;
+        }
+
+        @Override
+        public boolean onFling(MotionEvent event1, MotionEvent event2,
+                float velocityX, float velocityY) {
+            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
+            return true;
+        }
+    }
+}
+```
 
 ## Samples
 
