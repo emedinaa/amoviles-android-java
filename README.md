@@ -16,7 +16,10 @@
 
 ## Lesson
 
-- [x] xxxx
+- [x] Configurar proyecto
+- [x] Firmar  App
+- [x] Google Play Console
+- [x] Publicar una app en google play
 
 Java code
 
@@ -78,5 +81,8 @@ Extras
 
 - ProGuard https://www.guardsquare.com/en/products/proguard
 
+- Firmar tu App https://developer.android.com/studio/publish/app-signing?hl=es-419
+
+- Publicar app https://developer.android.com/studio/publish/?hl=es-419
 
 
