@@ -98,4 +98,8 @@ Extras
 
 - MediaPlayer https://developer.android.com/reference/android/media/MediaPlayer
 
+- Glide https://github.com/bumptech/glide
+
+- Picasso http://square.github.io/picasso/
+
 
