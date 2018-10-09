@@ -1,55 +1,95 @@
-# amoviles-android-java
-Curso de Aplicaciones Android con Java - 48h - Academia Móviles
+## Lesson 15 - Thursday, October 11, 2018
 
-# Instructor :
+- Review
 
-Eduardo José Medina Alfaro 
+- Lesson
 
-e-mail : emedinaa@gmail.com
+- Samples
 
-Android Developer Senior at Belatrix & Mapsalud https://www.linkedin.com/in/emedinaa/
+- Homework
 
-# Tareas
+- Resources
 
-En cada clase hay un sección llamada "Homework" donde se indica la tarea a realizar. La tarea se envía vía email a 
-emedinaa@gmail.com con asunto "Android con Java G30-Q - Tarea X"
+## Review
 
-* No olviden borrar la carpeta *build* y  *app/build*
+¿Qué temas vimos en la clase pasada ?
 
-##
+## Lesson
 
-# Temario :
+Image support
 
-- Java para mobile developers
+<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/media/android_image_formats.png" height="360" />
 
-- Fundamentos de Android
+Audio formats and codecs
 
-- Entorno de desarrollo
+<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/media/android_audio_formats.png" height="640" />
 
-- GUI básico (Interfaz de usuario)
+Video formats and codecs
 
-- GUI Avanzado (Interfaz de usuario)
+<img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/media/android_video_formats.png" height="360" />
 
-- Eventos
 
-- Herramientas de Debugging
+Java code
 
-- GUI usando Fragments
+```java
 
-- Content Providers y broadcast receivers
+```
 
-- Base de Datos
+Xml code 
 
-- REST , conexión remota
+```xml
 
-- Geolocalización
+```
 
-- Internacionalización
+Image
 
-- Sensores
+<img src="https://developer.android.com/images/fundamentals/diagram_backstack_singletask_multiactivity.png" height="360" />
 
-- Google maps
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
-- Multimedia
+Bold /italic
+**bold**
+*italic* with Markdown. 
+Link 
+You can even [link to Google!](http://google.com)
+Headers
 
-- Publicación Google Play
+# This is an <h1> tag
+## This is an <h2> tag
+###### This is an <h6> tag
+
+Lists
+
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+
+Extras
+
+- [x] This is a complete item
+- [ ] This is an incomplete item
+
+
+
+## Samples
+
+## Exercises
+
+## Homework
+- xxxx
+
+## Resources 
+
+- Exoplayer https://developer.android.com/guide/topics/media/exoplayer
+
+- Github exoplayer https://github.com/google/ExoPlayer
+
+- Exployer guide https://google.github.io/ExoPlayer/
+
+- Exoplayer codelab https://codelabs.developers.google.com/codelabs/exoplayer-intro/#0
+
+- Audio & Video https://developer.android.com/guide/topics/media/
+
+- Supported media formats https://developer.android.com/guide/topics/media/media-formats
+
