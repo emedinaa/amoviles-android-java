@@ -57,10 +57,12 @@ String locale = primaryLocale.getDisplayName();
 *Otras consideraciones *
 
 Date formats :
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_date_formats.png" height="240" />
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_date_formats.png" height="360" />
 
 Number formats :
-<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_number_formats.png" height="240" />
+
+<img src="https://github.com/learning-android-pe/training-resources/blob/master/localization/android_number_formats.png" height="360" />
 
 *Translations Editor*
 
