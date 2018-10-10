@@ -1,4 +1,4 @@
-## Lesson 15 - Thursday, October 11, 2018
+## Lesson 15 - Wednesday, October 10, 2018
 
 - Review
 
@@ -33,48 +33,6 @@ Video formats and codecs
 
 <img src="https://raw.githubusercontent.com/learning-android-pe/training-resources/master/media/android_video_formats.png" height="360" />
 
-
-Java code
-
-```java
-
-```
-
-Xml code 
-
-```xml
-
-```
-
-Image
-
-<img src="https://developer.android.com/images/fundamentals/diagram_backstack_singletask_multiactivity.png" height="360" />
-
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-
-Bold /italic
-**bold**
-*italic* with Markdown. 
-Link 
-You can even [link to Google!](http://google.com)
-Headers
-
-# This is an <h1> tag
-## This is an <h2> tag
-###### This is an <h6> tag
-
-Lists
-
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
-
-Extras
-
-- [x] This is a complete item
-- [ ] This is an incomplete item
-
 ## Samples
 
 ## Exercises
@@ -101,5 +59,10 @@ Extras
 - Glide https://github.com/bumptech/glide
 
 - Picasso http://square.github.io/picasso/
+
+- Mobile Vision https://developers.google.com/vision/
+
+- Android Vision https://github.com/googlesamples/android-vision
+
 
 
