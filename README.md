@@ -312,5 +312,9 @@ https://developer.android.com/training/location/geofencing
 
 - Google API console https://console.developers.google.com/
 
+- Mobile SDk Here https://developer.here.com/develop/mobile-sdks
+
+- Mapbox https://www.mapbox.com/
+
 
 
