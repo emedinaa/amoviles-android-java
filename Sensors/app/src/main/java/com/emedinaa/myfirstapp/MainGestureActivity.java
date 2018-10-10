@@ -36,7 +36,7 @@ public class MainGestureActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 gd.onTouchEvent(motionEvent);
-                return false;
+                return true;
             }
         });
         // END_INCLUDE(init_detector)

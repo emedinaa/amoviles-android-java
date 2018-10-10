@@ -37,6 +37,14 @@
         </activity>
         <activity android:name=".AccelerometerPlayActivity">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".MainGestureActivity">
 
             <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,16 +52,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
 
-        </activity>
-        <activity android:name=".MainGestureActivity">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
         <activity android:name=".MoveBallActivity">
             <!--<intent-filter>
@@ -71,11 +69,11 @@
         </activity>
 
         <activity android:name=".MainMultitouchActivity">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
     </application>
 
