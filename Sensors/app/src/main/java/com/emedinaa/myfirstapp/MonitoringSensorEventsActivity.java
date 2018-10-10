@@ -1,7 +1,6 @@
 package com.emedinaa.myfirstapp;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -16,6 +15,7 @@ public class MonitoringSensorEventsActivity extends AppCompatActivity implements
 
     private SensorManager mSensorManager;
     private Sensor mLight;
+    private Sensor mProximity;
     private ImageView imageViewLight;
 
 
@@ -27,17 +27,22 @@ public class MonitoringSensorEventsActivity extends AppCompatActivity implements
         imageViewLight= findViewById(R.id.imageViewLight);
         //sensor
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        mLight = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        //mLight = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        mProximity= mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+
     }
 
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        float lux = event.values[0];
+        float proximity = event.values[0];
+        Log.v("CONSOLE", "proximity "+proximity);
+        Log.v("CONSOLE", "max Value "+mProximity.getMaximumRange());
+        /*float lux = event.values[0];
         Log.v("CONSOLE", "lux "+lux);
 
         int colorValue = (int) (255f * lux / mLight.getMaximumRange());
-        imageViewLight.setBackgroundColor(Color.rgb(colorValue, colorValue, colorValue));
+        imageViewLight.setBackgroundColor(Color.rgb(colorValue, colorValue, colorValue));*/
     }
 
     @Override
@@ -48,7 +53,9 @@ public class MonitoringSensorEventsActivity extends AppCompatActivity implements
     @Override
     protected void onResume() {
         super.onResume();
-        mSensorManager.registerListener(this, mLight, SensorManager.SENSOR_DELAY_NORMAL);
+        //mSensorManager.registerListener(this, mLight, SensorManager.SENSOR_DELAY_NORMAL);
+        //mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_FASTEST);
+        mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_GAME);
     }
 
     @Override

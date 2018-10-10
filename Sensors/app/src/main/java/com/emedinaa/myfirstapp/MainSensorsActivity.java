@@ -27,7 +27,8 @@ public class MainSensorsActivity extends AppCompatActivity {
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         List<Sensor> deviceSensors = mSensorManager.getSensorList(Sensor.TYPE_ALL);
         for (Sensor sensor:deviceSensors) {
-            Log.v("CONSOLE", "sensor "+sensor.getName()+"  type : "+sensor.getStringType());
+            //Log.v("CONSOLE", "sensor "+sensor.getName()+"  type : "+sensor.getStringType());
+            Log.v("CONSOLE", "sensor "+sensor.getName()+"  type : "+sensor.getType());
         }
 
         //Verificar si un sensor esta disponible

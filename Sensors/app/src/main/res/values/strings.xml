@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Sensors</string>
     <string name="hello_world">Hello World with Java!</string>
+    <string name="intro_message">Multitouch</string>
 </resources>
