@@ -1,4 +1,47 @@
 <resources>
-    <string name="app_name">MyFirstApp</string>
+    <string name="app_name">Multimedia</string>
     <string name="hello_world">Hello World with Java!</string>
+
+    <!-- Message to display while video is buffering. -->
+    <string name="buffering_string">Buffering&#8230;</string>
+
+    <!-- Message to display when video is finished playing. -->
+    <string name="toast_message">Playback completed.</string>
+
+    <string name="label_stop">Stop</string>
+    <string name="label_pause">Pause</string>
+    <string name="label_play">Play</string>
+    <string name="label_play_pause">Play and pause toggle</string>
+    <string name="label_previous">Previous track</string>
+    <string name="label_next">Next track</string>
+
+    <string name="intro_message">
+        <![CDATA[
+
+
+            This is a sample application for the Android Training class
+            &quot;Displaying Bitmaps Efficiently&quot;
+            (http://developer.android.com/training/displaying-bitmaps/).\n\n
+
+            It demonstrates how to load large bitmaps efficiently off the main UI thread, caching
+            bitmaps (both in memory and on disk), managing bitmap memory and displaying bitmaps
+            in UI elements such as ViewPager and ListView/GridView.
+
+
+        ]]>
+    </string>
+
+    <string name="clear_cache_menu">Clear Caches</string>
+    <string name="clear_cache_complete_toast">Caches have been cleared</string>
+    <string name="imageview_description">Image Thumbnail</string>
+    <string name="no_network_connection_toast">No network connection found</string>
+
+    <string name="picture">Picture</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This app needs camera permission.</string>
+
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
 </resources>
