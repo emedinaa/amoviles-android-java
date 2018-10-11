@@ -198,6 +198,18 @@ Firma manual
 
 <img src="https://developer.android.com/studio/images/publish/project-structure-signing_2-1_2x.png?hl=es-419" />
 
+
+**Google Play**
+
+*Google Play* https://developer.android.com/distribute/?hl=es-419
+
+*Centro de Políticas de desarrolladores* https://play.google.com/about/developer-content-policy/#!?modal_active=none
+
+*Academy for App Success* https://playacademy.exceedlms.com/student/catalog
+
+*Cambios en Google Play consola 2018* https://android-developers.googleblog.com/2018/05/io-2018-everything-new-in-google-play.html
+
+
 Java code
 
 ```java
