@@ -148,6 +148,7 @@ public class CameraIntentActivity extends AppCompatActivity  implements View.OnC
         */
         imageView.setImageBitmap(bitmap);
     }
+
     protected void processPhotoGallery(Uri photoUri){
         mCurrentPhotoPath= pathByUri(photoUri);
         if(mCurrentPhotoPath!=null){

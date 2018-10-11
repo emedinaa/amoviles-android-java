@@ -27,14 +27,11 @@
             android:value="face" />
 
         <activity android:name=".MainVideoActivity">
-
-
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
+            </intent-filter>-->
         </activity>
         <activity
             android:name=".MainSoundActivity"
@@ -48,13 +45,11 @@
         <activity
             android:name=".ImageGridActivity"
             android:label="@string/app_name">
-
-            <!--
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
+            </intent-filter>-->
+
         </activity>
         <activity
             android:name=".displayingbitmaps.ImageDetailActivity"
@@ -69,11 +64,11 @@
             android:label="Face Tracker"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="fullSensor">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
     </application>
 

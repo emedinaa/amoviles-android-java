@@ -234,7 +234,7 @@ public class MainActivity extends AppCompatActivity implements
             getBackgroundHandler().post(new Runnable() {
                 @Override
                 public void run() {
-                    File file = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES),
+                    File file = new File(getExternalFilesDir(Environment.DIRECTORY_DCIM),
                             "picture.jpg");
                     OutputStream os = null;
                     try {
