@@ -209,6 +209,7 @@ Firma manual
 
 *Cambios en Google Play consola 2018* https://android-developers.googleblog.com/2018/05/io-2018-everything-new-in-google-play.html
 
+*SDK Developers* https://developer.android.com/distribute/google-play/sdk-developers?hl=es-419
 
 Java code
 
