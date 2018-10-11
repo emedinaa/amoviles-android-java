@@ -64,5 +64,7 @@ Video formats and codecs
 
 - Android Vision https://github.com/googlesamples/android-vision
 
+- Loading Large Bitmaps Efficiently https://developer.android.com/topic/performance/graphics/load-bitmap
+
 
 
