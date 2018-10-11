@@ -21,10 +21,93 @@
 - [x] Google Play Console
 - [x] Publicar una app en google play
 
+**Configurar proyecto**
+
+*Configurar tu compilación* https://developer.android.com/studio/build/?hl=es-419
+
+- Remover los Logs 
+
+```java
+public class LogUtils {
+    public static void debug(final String tag, String message) {
+        if (BuildConfig.DEBUG) {
+            Log.d(tag, message);
+        }
+    }
+}
+```
+- Parámetros , keys o credenciales pueden ser manejados con Gradle
+
+Flavors
+
+```groovy
+android {
+    defaultConfig {
+        applicationId "com.example.myapp"
+    }
+    productFlavors {
+        free {
+            applicationIdSuffix ".free"
+        }
+        pro {
+            applicationIdSuffix ".pro"
+        }
+    }
+}
+```
+
+- Application ID
+
+```groovy
+android {
+    defaultConfig {
+        applicationId "com.example.myapp"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    ...
+}
+```
+
+- Activar ProGuard
+
+*Reducir tu código y tus recursos* https://developer.android.com/studio/build/shrink-code?hl=es-419
+
+```groovy
+android {
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    ...
+}
+```
+
+- Generar APK de Debug
+
+*Compilar tu proyecto desde línea de comandos* https://developer.android.com/studio/build/building-cmdline?hl=es-419
+
+```java
+gradlew assembleDebug
+```
+
+- Analizar APK
+
+*Analizar tu compilación con APK Analyzer* https://developer.android.com/studio/build/apk-analyzer
+
+<img src="https://www.google.com.pe/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiPseK84v7dAhXsIjQIHdboAeQQjRx6BAgBEAU&url=https%3A%2F%2Fdeveloper.android.com%2Fstudio%2Fbuild%2Fapk-analyzer&psig=AOvVaw1U33osYG1BInb2rC_URc_f&ust=1539360378308032" />
+
+**Firmar App**
+
 Java code
 
 ```java
-
+gradlew assembleDebug
 ```
 
 Xml code 
