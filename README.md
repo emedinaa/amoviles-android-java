@@ -198,6 +198,40 @@ Firma manual
 
 <img src="https://developer.android.com/studio/images/publish/project-structure-signing_2-1_2x.png?hl=es-419" />
 
+- Generar una APK firmada
+
+![img](screenshots/generate_apk1.png)
+
+![img](screenshots/generate_apk2.png)
+
+![img](screenshots/generate_apk3.png)
+
+- Crear credenciales
+
+![img](screenshots/generate_apk4.png)
+
+![img](screenshots/generate_apk5.png)
+
+![img](images/generate_apk5-1.png)
+
+- Crear APK
+
+![img](screenshots/generate_apk6.png)
+
+![img](screenshots/generate_apk7.png)
+
+![img](screenshots/output_release.png)
+
+- Comandos
+
+```
+    ./gradlew assembleDebug
+
+    ./gradlew installDebug
+```
+
+![img](images/output_debug.png)
+
 
 **Google Play**
 
@@ -211,46 +245,41 @@ Firma manual
 
 *SDK Developers* https://developer.android.com/distribute/google-play/sdk-developers?hl=es-419
 
-Java code
+- Ficha Google Play
 
-```java
-gradlew assembleDebug
-```
+Título (50)
 
-Xml code 
+Descripción breve (80)
 
-```xml
+Descripción completa (4000)
 
-```
+Recursos gráficos
+    
+> Captura de pantalla para teléfono (min 2)
 
-Image
+> Icono de alta resolución 512x512
 
-<!--<img src="https://developer.android.com/images/fundamentals/diagram_backstack_singletask_multiactivity.png" height="360" /> -->
+> Imagen destacada 1024x500
 
-<!-- ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)-->
+> Imagen promocional 180x120
 
-Bold /italic
-**bold**
-*italic* with Markdown. 
-Link 
-You can even [link to Google!](http://google.com)
-Headers
+Categorización
 
-# This is an <h1> tag
-## This is an <h2> tag
-###### This is an <h6> tag
+> Tipo de app y categoría
 
-Lists
+- Clasificación de Contenido
 
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
+- Precio y distribución
 
-Extras
+- Version de la aplicación
 
-- [x] This is a complete item
-- [ ] This is an incomplete item
+    > Producción (Google play)
+
+    > Beta (Google play)
+
+    > Alfa
+
+    > Prueba interna    
 
 ## Samples
 
