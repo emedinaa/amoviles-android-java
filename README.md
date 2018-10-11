@@ -56,6 +56,41 @@ android {
 }
 ```
 
+Manejo de keys y propiedades con Gradle
+
+```groovy
+...
+
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    ...
+}
+```
+
+```groovy
+android {
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    ...
+  }
+```
+
+
 - Application ID
 
 ```groovy
@@ -143,13 +178,25 @@ gradlew assembleDebug
 
 *Analizar tu compilación con APK Analyzer* https://developer.android.com/studio/build/apk-analyzer
 
+Firma de aplicaciones desde Google Play
+
 <img src="https://developer.android.com/studio/images/build/apk-over-64k-limit_2x.png" />
 
 **Firmar App**
 
 *Firmar tu aplicación* https://developer.android.com/studio/publish/app-signing?hl=es-419
 
+Firma de aplicaciones desde Google Play
+
 <img src="https://developer.android.com/studio/images/publish/appsigning_googleplayappsigningdiagram_2x.png?hl=es-419" />
+
+Administrar tu clave y keystore propios
+
+<img src="https://developer.android.com/studio/images/publish/appsigning_googleplayappsigningdiagram_2x.png?hl=es-419" />
+
+Firma manual
+
+<img src="https://developer.android.com/studio/images/publish/project-structure-signing_2-1_2x.png?hl=es-419" />
 
 Java code
 
