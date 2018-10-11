@@ -75,6 +75,8 @@ android {
 
 *Reducir tu código y tus recursos* https://developer.android.com/studio/build/shrink-code?hl=es-419
 
+*Proguard rules examples* https://medium.com/androiddevelopers/practical-proguard-rules-examples-5640a3907dc9
+
 ```groovy
 android {
     buildTypes {
@@ -86,6 +88,47 @@ android {
     }
     ...
 }
+```
+Proguard rules :
+
+```
+# butterknife
+-keep class butterknife.** { *; }
+-dontwarn butterknife.internal.**
+-keep class **$$ViewBinder { *; }
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <fields>;
+}
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <methods>;
+}
+
+# retrofit
+-dontwarn retrofit.**
+-keep class retrofit.** { *; }
+-keepattributes Signature
+-keepattributes Exceptions
+
+# okHttp3
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class okhttp3.** { *; }
+-keep interface okhttp3.** { *; }
+-dontwarn okhttp3.**
+-dontnote okhttp3.**
+
+# okio
+-keep class sun.misc.Unsafe { *; }
+-dontwarn java.nio.file.*
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+
+# gson
+
+keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+
 ```
 
 - Generar APK de Debug
@@ -100,9 +143,13 @@ gradlew assembleDebug
 
 *Analizar tu compilación con APK Analyzer* https://developer.android.com/studio/build/apk-analyzer
 
-<img src="https://www.google.com.pe/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiPseK84v7dAhXsIjQIHdboAeQQjRx6BAgBEAU&url=https%3A%2F%2Fdeveloper.android.com%2Fstudio%2Fbuild%2Fapk-analyzer&psig=AOvVaw1U33osYG1BInb2rC_URc_f&ust=1539360378308032" />
+<img src="https://developer.android.com/studio/images/build/apk-over-64k-limit_2x.png" />
 
 **Firmar App**
+
+*Firmar tu aplicación* https://developer.android.com/studio/publish/app-signing?hl=es-419
+
+<img src="https://developer.android.com/studio/images/publish/appsigning_googleplayappsigningdiagram_2x.png?hl=es-419" />
 
 Java code
 
@@ -118,9 +165,9 @@ Xml code
 
 Image
 
-<img src="https://developer.android.com/images/fundamentals/diagram_backstack_singletask_multiactivity.png" height="360" />
+<!--<img src="https://developer.android.com/images/fundamentals/diagram_backstack_singletask_multiactivity.png" height="360" /> -->
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+<!-- ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)-->
 
 Bold /italic
 **bold**
