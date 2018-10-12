@@ -320,5 +320,8 @@ Categorización
 
 - Android Developers Blog https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html
 
+- CrashLytics https://fabric.io/kits/android/crashlytics
+
+- Firebase Crash Reporting https://firebase.google.com/docs/crash/?hl=es-419
 
 
