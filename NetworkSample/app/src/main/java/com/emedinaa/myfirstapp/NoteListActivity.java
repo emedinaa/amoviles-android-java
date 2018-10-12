@@ -72,10 +72,12 @@ public class NoteListActivity extends AppCompatActivity {
                         notesResponse=response.body();
                         if(notesResponse!=null){
                             if(notesResponse.getStatus()==200){
-                                Log.v("CONSOLE", "success "+notesResponse);
+                                //Log.v("CONSOLE", "success "+notesResponse);
+                                NLog.v("success "+notesResponse);
                                 renderNotes(notesResponse.getData());
                             }else{
-                                Log.v("CONSOLE", "error "+notesResponse);
+                                NLog.v("error "+notesResponse);
+                                //Log.v("CONSOLE", "error "+notesResponse);
                             }
                         }
                     }else{

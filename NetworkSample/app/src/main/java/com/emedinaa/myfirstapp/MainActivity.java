@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 showMessage(USER_MESSAGE);
             }
         });
+
+        //BuildConfig.HOST
+        //BuildConfig.GA
     }
 
     private void showMessage(String message){

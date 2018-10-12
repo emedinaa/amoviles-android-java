@@ -13,4 +13,10 @@ public class NLog {
             Log.v(TAG,message);
         }
     }
+
+    public static void d(@NonNull String message){
+        if(BuildConfig.DEBUG){
+            Log.d(TAG,message);
+        }
+    }
 }

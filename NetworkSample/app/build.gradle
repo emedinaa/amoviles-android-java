@@ -7,12 +7,12 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.emedinaa.myfirstapp"
+        applicationId "com.belatrix.samples.mvp"//"com.emedinaa.myfirstapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
 
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -21,13 +21,16 @@ android {
         props.load(new FileInputStream(propFile))
 
         debug {
-            buildConfigField("String", "HOST", props['host'])
+            buildConfigField("String", "HOST", props['hostDev'])
+            buildConfigField("String", "GA", props['gaKey'])
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard-rules.pro'
         }
+
         release {
             buildConfigField("String", "HOST", props['host'])
+            buildConfigField("String", "GA", props['gaKey'])
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
